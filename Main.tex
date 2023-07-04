@@ -19,7 +19,8 @@
 \usepackage{qrcode}
 \usepackage[parfill]{parskip}
 \usepackage{hyperref}
-
+\usepackage{multicol}
+\usepackage{ragged2e}
 
 
 % A special dedication to Heather Shaffer. Thank you so much for everything. This would not exist without you.
@@ -73,6 +74,9 @@
   \tikztonodes}}
 } 
 
+
+\newcommand{\entry}[2]{\textbf{#1}\quad {#2}}
+
 %==============================================================
         %POINTS FORMATTING
 %==============================================================
@@ -118,14 +122,28 @@
 
 \begin{center}
     \hspace{0pt}
-    \vfill
+
+    \vspace{4cm}
+
     \textbf{Google Drive Folder}
     \vspace{.7cm}
     
     \qrcode{https://drive.google.com/drive/folders/1Xas6NEKfgMRz3RCLSFXf2T-hdoFQ8gFO?usp=sharing}    
-    \vfill
+    
+    \vspace{8cm}
+    
     \hspace{0pt}
+    
+    \begin{longtable}[h]{|C{1cm}|C{1cm}|C{1cm}|C{1cm}|}
+    \hline 2022 & 4.84 & 2027 & \\\hline
+        2023 & & 2028 & \\\hline
+        2024 & & 2029 & \\\hline
+        2025 & & 2030 & \\\hline
+        2026 & & 2031 & \\\hline
+    \end{longtable}
 \end{center}
+
+\newpage
 
 \tableofcontents
 
@@ -918,13 +936,16 @@ Try out the following derivatives. Remember, \textbf{all other derivative rules 
 \end{questions}
 \textbf{WARNING:} You are \textit{going} to need to memorize multiple trig identities for later units. You will start practicing that for tonight's homework as well.
 
+
+
+
 \newpage
 \phantomsection\addcontentsline{toc}{subsection}{Implicit Differentiation}
 \subsection*{Implicit Differentiation}
 What we have been doing so far is explicit differentiation, as $y$ has always been an explicit function of $x$. Today, we will continue our journey of taking derivatives but now with equations that are not functions!\\
 \begin{tcolorbox}[title= STEPS FOR IMPLICIT DIFFERENTIATION,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
     \begin{enumerate}
-        \item Differentiate both sides of the equation with respect to $x$, doing $x$ as you normally would. The derivative of $y$ becomes $dy/dx$.
+        \item Differentiate both sides of the equation with respect to $x$, doing $x$ as you normally would. The derivative of $y$ becomes $dy/dx$ or $y'$.
         \item Collect terms with $dy/dx$ on one side of the equation.
         \item Factor out the $dy/dx$.
         \item Solve for $dy/dx$.
@@ -945,7 +966,7 @@ What we have been doing so far is explicit differentiation, as $y$ has always be
     
     \question The Folium of Descartes is $x^3+y^3=9xy$. Find and graph the tangent lines at the points $(4,\,2)$ and $(2,\,4)$.
     
-    \begin{tikzpicture}[scale=.65]
+    \begin{tikzpicture}[scale=.55]
         \draw[style=help lines] (-5.2,-5.2) grid (5.2,5.2);
         \draw[latex-latex,thick] (-5.5,0) -- (5.5,0) node[below] {$x$};
         \draw[latex-latex,thick] (0,-5.5) -- (0,5.5) node[left] {$y$};
@@ -962,7 +983,7 @@ What we have been doing so far is explicit differentiation, as $y$ has always be
         };
     \end{tikzpicture}
     
-    \vspace{\stretch{.17}}
+    \vspace{\stretch{.1}}
     
     \newpage
     
@@ -977,7 +998,16 @@ What we have been doing so far is explicit differentiation, as $y$ has always be
 
 Second derivatives of Implicit Functions is a skill that is always exercised on the AP Exam. The level of simplification might vary, but the overall procedure and \textit{form} of the final answer is important.
 
+\newpage
 
+Two more examples of second derivatives (time-permitting):
+\begin{questions}
+    \question $\displaystyle 5y^2+2=5x^2$
+    \vspace{\stretch{1}}
+    
+    \question $y+\cos y=x+1$
+    \vspace{\stretch{1}}
+\end{questions}
 
 \newpage
 \phantomsection\addcontentsline{toc}{subsection}{Derivatives of Transcendental Functions}
@@ -1602,15 +1632,14 @@ Find the extrema of $f(x)=3x^4-4x^3$ on the interval $[1,\,2]$.
 
 There are times when a curve can hold water or spill water. We call this ability \textbf{concavity}.\\
 
-\begin{tcolorbox}[title= THE CONCAVITY TEST,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
-
+\begin{tcolorbox}[title= THE CONCAVITY TEST,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
     The graph of a twice differentiable function $f(x)$ is
     \begin{questions}
         \question concave up if $f''(x)>0$.
         \question concave down if $f''(x)<0$.
     \end{questions}
     
-    The point where the graph has a tangent line and when the concavity changes is a \textbf{point of inflection}.
+    The point where the graph has a tangent line and when the concavity changes is a \textbf{point of inflection}. When $f''(x)=0$ or $f''(x)$ DNE are both candidates for POI's.
     
 \end{tcolorbox}
 
@@ -1622,7 +1651,7 @@ There are times when a curve can hold water or spill water. We call this ability
 
     \begin{questions}
         \question If $f'(c)=0$ and $f''(c)<0$, then $f(x)$ has a local maximum at $x=c$.
-        \question If $f'(c)=0$ and $f''(c)<0$, then $f(x)$ has a local minimum at $x=c$.
+        \question If $f'(c)=0$ and $f''(c)>0$, then $f(x)$ has a local minimum at $x=c$.
     \end{questions}
     
     The test fails if $f''(c)=0$ or if $f''(c)$ does not exist.
@@ -2025,7 +2054,7 @@ Another example: if a car accelerating from 0 takes 8 seconds to go 352 ft, its 
     \question A ladder leans against a vertical wall with the bottom of the ladder 8 feet from the wall on a horizontal floor.  At that time, the bottom end of the ladder is being pulled away at the rate of 3 ft/sec and the top of the ladder slips down the wall at the rate of 4 ft/sec.  How long is the ladder?  [7, 8, 9, 10, 15, 17, 19, 21, 23]
     \vspace{\stretch{1}}
     
-    \question An object moves on a parabola  .  When $x = 3$, the $x$-coordinate of the object is increasing at the rate of 1 foot per minute.  How fast is the $y$-coordinate increasing at that moment?  [11, 12]
+    \question An object moves on a parabola $3y=x^2$. When $x = 3$, the $x$-coordinate of the object is increasing at the rate of 1 foot per minute.  How fast is the $y$-coordinate increasing at that moment?  [11, 12]
     \vspace{\stretch{1}}
     
     \newpage
@@ -2081,6 +2110,8 @@ Remember when we computed $\displaystyle\lim_{x\to0}\frac{\sin x}{x}$? We got $\
 
 
 
+%%make linearization and newton's method take-home packets
+
 \newpage
 \phantomsection\addcontentsline{toc}{subsection}{Differentials, Linearization, Newton's Method}
 \subsection*{Differentials}
@@ -2098,65 +2129,28 @@ Remember when we computed $\displaystyle\lim_{x\to0}\frac{\sin x}{x}$? We got $\
     \vspace{\stretch{.8}}
     
     \question $x+y=xy,\,x=2,\,dx=0.05$
-    \vspace{\stretch{.1}}
+    \vspace{\stretch{.8}}
 \end{questions}
 
 We can use differentials to estimate the change in the value of a function! Let $f(x)$ be differentiable at $x=a$. The approximate change in the value of $f(x)$ when $x$ changes from $a$ to $a+dx$ is $df=f'(a)\,dx$.
 \begin{questions}
     \setcounter{question}{3}
     \question The radius of a circle is to be increased from $r=10$ to $r=10.1$. Use differentials to estimate the change in area. Calculate the estimated percent change.
-    \vspace{\stretch{1.5}}
+    \vspace{\stretch{1.2}}
 \end{questions}
 
-\subsection*{Linearization}
-\noindent\textbf{Example:} Find the equation of the line tangent to the curve of $f(x)=\sqrt{1+x}$ at $x=0$.
-\vspace{\stretch{1.25}}
+\subsection*{Linearization \& Newton's Method}
+This section has been replaced with a small take-home assignment. Expect to see this material on a quiz of test. It is not dense enough to merit the use of in-class instruction. Come find me outside of class if you have questions.
 
-\begin{tcolorbox}[title= LINEARIZATION,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
-
-    If $y=f(x)$ is differentiable at $x=a$, then $L(x)=f(a)+f'(a)(x-a)$ is the linearization of $f$ at $a$. The approximation $f(x)\approx L(x)$ is the standard approximation of $f$ at $a$.
+\begin{center}
+    Link to File:
     
-\end{tcolorbox}
-
-\newpage
-
-\begin{questions}
-    \question Find the linearization of $y=x^3-2x^2+3$ at $x=2$. Use it to approximate $f(2.2)$.
-    \vspace{\stretch{1}}
+    \vspace{.2cm}
     
-    \question Find the linearization of $f(x)=\cos x$ at $x=\pi/2$ and use it to approximate $\cos 1.75$ without a calculator. Then, use a calculator to determine the accuracy of this approximation.
-    \vspace{\stretch{1}}
-\end{questions}
-
-\subsection*{Newton's Method}
-\textbf{Fun Fact:} This is how your calculator is able to determine the roots of a function when you use the \texttt{CALC} command. Remember how it makes you guess first? This is the math behind why...
-
-\begin{tcolorbox}[title= STEPS FOR NEWTON's METHOD,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
-
-    \begin{enumerate}
-        \item Simplify the formula $\displaystyle x_{n+1}=x_n-\frac{f(x_n)}{f'(x_{n})}$ using the given function.
-        \item Guess a first approximation for the root of the equation. If you need to, look at the graph to pick a good guess.
-        \item Use the first approximation to get a second approximation
-        \item Use the second approximation to get a third approximation
-        \item Use the third approximation to get a fourth approximation, and so on.
-        \item Stop when you are sure \textbf{of the first 3 decimal places}.
-    \end{enumerate}
+    \qrcode{https://drive.google.com/file/d/1GqxwEAv6EcMuU0GQZDaL8cGVEBIjYr5e/view?usp=sharing}
     
-\end{tcolorbox}
+\end{center}
 
-\begin{questions}
-    
-    \begin{minipage}{0.45\linewidth}
-        \question Find the positive root of $f(x)=x^2-2$.    
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.45\linewidth}
-        \question Find a root of $f(x)=x^3+3x+1$.
-    \end{minipage}
-    
-    \vspace{\stretch{1}}
-    
-\end{questions}
 
 
 \newpage
@@ -2178,7 +2172,7 @@ Given $dy/dx$, find $y$.
 Are you \textit{sure}?
 
 
-\begin{tcolorbox}[title= DEFINITION OF THE INDEFINITE INTEGRAL,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= DEFINITION OF THE INDEFINITE INTEGRAL,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     The indefinite integral of $f$ with respect to $x$ is the set of all antiderivatives of a function $f(x)$.
     \[\int f(x)\,dx=F(x)+C\]
@@ -2228,10 +2222,6 @@ You would distribute and then do each term individually. However, there are goin
     \vspace{\stretch{1}}
 \end{questions}
 
-\newpage
-\phantomsection\addcontentsline{toc}{subsection}{U-Substitution}
-\subsection*{U-Substitution}
-Section contents
 
 
 \newpage
@@ -2269,11 +2259,32 @@ Also... you are going to need to know a lot of trig identities.
         \question $\displaystyle\int\frac{\sin x}{\cos^2 x}\,dx$
     \end{minipage}
     
-    \vspace{\stretch{1}}
+    \vspace{\stretch{1.2}}
     
-    \question $\displaystyle\int 16x\sin^3\left(2x^2+1\right) \,dx$
+    \newpage
+    
+    \question $\displaystyle\int 16x\sin^3\left(2x^2+1\right)\cos\left(2x^2+1\right) \,dx$
     \vspace{\stretch{1}}
 \end{questions}
+
+\begin{tcolorbox}[title= INTEGRAL OF SECANT AND COSECANT,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+
+    \[\displaystyle\int\sec u\,du=\ln|\sec u+\tan u|+C \hspace{.6in}\int\csc u\,du=-\ln|\csc u + \cot u|+C\]
+    
+\end{tcolorbox}
+You \textbf{have} to memorize these. The algebraic trick to do the integration by hand is more annoying to remember than just having this formula ingrained in your memory.
+
+\begin{questions}
+    \question $\displaystyle \int 7x\sec(x^2)\,dx$
+    
+    \vspace{\stretch{1}}
+    
+    \question $\displaystyle \int \frac{\cos x+\sin x}{\tan x}\,dx$
+    
+    \vspace{\stretch{1}}
+\end{questions}
+
+
 
 
 \newpage
@@ -2344,7 +2355,7 @@ Also... you are going to need to know a lot of trig identities.
 
 \newpage
 
-\begin{tcolorbox}[title= INTEGRALS OF INVERSE TRIG FUNCTIONS,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= INTEGRALS OF INVERSE TRIG FUNCTIONS,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     \begin{align*}
         \displaystyle\int\frac{du}{\sqrt{a^2-u^2}} &= \arcsin\frac{u}{a}+C & \displaystyle\int\frac{du}{a^2+u^2} &= \displaystyle\frac{1}{a}\arctan\frac{u}{a}+C 
@@ -2361,7 +2372,8 @@ Also... you are going to need to know a lot of trig identities.
     \question $\displaystyle\int\frac{-1}{3x\sqrt{9x^2-25}}\,dx$
     \vspace{\stretch{1}}
     
-    \question $\displaystyle\int\frac{\cos\theta}{\sqrt{\sin^2\theta-1}}\,d\theta$
+    
+    \question $\displaystyle\int\frac{\cos\theta}{\sqrt{1-\sin^2\theta}}\,d\theta$
     \vspace{\stretch{1}}
 \end{questions}
 
@@ -2462,7 +2474,7 @@ Be careful that you do not write down the limits of integration when your integr
 \phantomsection\addcontentsline{toc}{subsection}{Area Under the Curve with RAM}
 \subsection*{Area Under the Curve with RAM}
 A train moves along a track at a steady rate of 75 miles per hour from 7 am to 9 am. What is the total distance traveled by the train? What if the train doesn't travel at a steady rate? Then how do you find the distance?
-\vspace{\stretch{1}}
+\vspace{\stretch{.6}}
 
 Our goal is to calculate the area under a curve. We do that by breaking the area (which we cannot calculate) into rectangles (whose area we can calculate) and adding them together.
 
@@ -2512,7 +2524,7 @@ Our goal is to calculate the area under a curve. We do that by breaking the area
         \end{center}
     \end{minipage}
     
-    \vspace{\stretch{.5}}
+    \vspace{\stretch{1}}
     
     \begin{center}
         \underline{RAM is the Rectangular Approximation Method}\\
@@ -2525,12 +2537,11 @@ Our goal is to calculate the area under a curve. We do that by breaking the area
     
     \vspace{\stretch{.1}}
     
-    %\newpage
+    \newpage
     
     \question Find the area between the $x$-axis and the curve $y=-x^2+2x+24$ using MRAM and 5 intervals (5 rectangles). MAKE A SKETCH along with your approximation.
     \vspace{\stretch{1}}
     
-    \newpage
     
     \begin{minipage}[t]{0.55\linewidth}
     \question The table to the right shows the velocity of a model train engine moving along a track for 10 seconds. Estimate the distance traveled by the engine, using MRAM over 5 subintervals. Again, make a sketch!    
@@ -2557,8 +2568,10 @@ Our goal is to calculate the area under a curve. We do that by breaking the area
 
     
     
-    \vspace{\stretch{1}}
-
+    \vspace{\stretch{.5}}
+    
+    \newpage
+    
     \question Oil is leaking out of a tanker damaged at sea. The damage to the tanker is worsening as evidenced by the increased leakage each hour, recorded in the table below.
     \begin{parts}
         \part Give an upper and lower estimate of the total quantity of oil that has escaped over the 8 hours.
@@ -2581,8 +2594,22 @@ Our goal is to calculate the area under a curve. We do that by breaking the area
     \end{longtable}    
     
     
+    \hfill
     
     \vspace{\stretch{1}}
+    
+    \hfill
+    
+    \begin{longtable}[ht]{|C{1cm}|C{1cm}|C{1cm}|C{1cm}|C{1cm}|C{1cm}|}
+        \hline
+        $x$\Tstrut\Bstrut & $1$\Tstrut\Bstrut & $1.1$\Tstrut\Bstrut & $1.2$\Tstrut\Bstrut & $1.3$\Tstrut\Bstrut & $1.4$\Tstrut\Bstrut \\\hline
+        $f'(x)$\Tstrut\Bstrut & $8$\Tstrut\Bstrut & $10$\Tstrut\Bstrut & $12$\Tstrut\Bstrut & $13$\Tstrut\Bstrut & $14.5$\Tstrut\Bstrut \\\hline
+    \end{longtable}
+    
+    
+    \question Use a Midpoint Riemann sum with two subintervals of equal length and values (directly above) from the table to approximate $\displaystyle\int_1^{1.4} f'(x)\,dx$.
+    
+    
     
 \end{questions}
 
@@ -2592,7 +2619,7 @@ Our goal is to calculate the area under a curve. We do that by breaking the area
 
 
 \subsection*{Trapezoidal Rule}
-\begin{tcolorbox}[title= THE TRAPEZOIDAL RULE, black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= THE TRAPEZOIDAL RULE, colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     To approximate $\displaystyle\int_a^b f(x)\,dx$, use $\displaystyle T=\frac{h}{2}\left(y_0+2y_1+2y_2+2y_3+\dots+2y_{n-1}+y_n\right)$,
     where $[a,\,b]$ is partitioned into $n$ subintervals of equal length $\displaystyle h=\frac{b-a}{n}$.
@@ -2600,13 +2627,12 @@ Our goal is to calculate the area under a curve. We do that by breaking the area
 \end{tcolorbox}
 
 Fun Fact: $\displaystyle T=\frac{\text{LRAM}_n+\text{RRAM}_n}{2}$. However, this is not the same as MRAM!\\
-\\
 \begin{questions}
     \question An observer measures the outside temperature sporadically from noon until midnight, recording the temperatures in the following table. What is the average temperature for the 12-hour period?
     
     \begin{longtable}{|C{.9cm}|C{.9cm}|C{.5cm}|C{.5cm}|C{.5cm}|C{.5cm}|C{.5cm}|C{.5cm}|C{.5cm}|C{1.4cm}|}
         \hline
-        Time \Tstrut\Bstrut & Noon \Tstrut\Bstrut & 1 \Tstrut\Bstrut & 2 \Tstrut\Bstrut & 4 \Tstrut\Bstrut & 5 \Tstrut\Bstrut & 8 \Tstrut\Bstrut & 9 \Tstrut\Bstrut & 10\Tstrut\Bstrut & \text{Midnight}\Tstrut\Bstrut \\\hline
+        Time \Tstrut\Bstrut & Noon \Tstrut\Bstrut & 1 \Tstrut\Bstrut & 2 \Tstrut\Bstrut & 4 \Tstrut\Bstrut & 5 \Tstrut\Bstrut & 8 \Tstrut\Bstrut & 9 \Tstrut\Bstrut & 10\Tstrut\Bstrut & Mdnt \Tstrut\Bstrut \\\hline
         Temp \Tstrut\Bstrut & 63\Tstrut\Bstrut & 65\Tstrut\Bstrut & 66\Tstrut\Bstrut & 70\Tstrut\Bstrut & 69\Tstrut\Bstrut & 65\Tstrut\Bstrut & 64\Tstrut\Bstrut & 62\Tstrut\Bstrut & 55\Tstrut\Bstrut \\\hline
     \end{longtable}  
     
@@ -2616,22 +2642,8 @@ Fun Fact: $\displaystyle T=\frac{\text{LRAM}_n+\text{RRAM}_n}{2}$. However, this
 \vspace{\stretch{1.5}}
 
 \subsection*{Riemann Approximations}
-Basically, all the rectangle approximations \textit{are} Riemann approximations (or "Riemann Sums"). Below is an AP Exam question that solidifies this idea.
+Basically, all the rectangle approximations \textit{are} Riemann approximations (or "Riemann Sums"). While this is a separate section in most textbooks, let this be another word that equates to a process you already know.
 
-\begin{questions}
-    \begin{longtable}[ht]{|C{1cm}|C{1cm}|C{1cm}|C{1cm}|C{1cm}|C{1cm}|}
-        \hline
-        $x$\Tstrut\Bstrut & $1$\Tstrut\Bstrut & $1.1$\Tstrut\Bstrut & $1.2$\Tstrut\Bstrut & $1.3$\Tstrut\Bstrut & $1.4$\Tstrut\Bstrut \\\hline
-        $f'(x)$\Tstrut\Bstrut & $8$\Tstrut\Bstrut & $10$\Tstrut\Bstrut & $12$\Tstrut\Bstrut & $13$\Tstrut\Bstrut & $14.5$\Tstrut\Bstrut \\\hline
-        
-    \end{longtable}
-    
-    \setcounter{question}{1}
-    \question Use a Midpoint Riemann sum with two subintervals of equal length and values from the table to approximate $\displaystyle\int_1^{1.4} f'(x)\,dx$.
-    
-    \vspace{\stretch{1}}
-    
-\end{questions}
 
 
 \newpage
@@ -2670,9 +2682,30 @@ The area under the curve can be estimated using $\displaystyle S_n=\sum_{k=1}^n 
 \noindent\textbf{Think!} Interpret the above definition and translate into less "mathy" talk:
 \vspace{\stretch{.6}}
 
-\textbf{Using the notation}\\
+%actually build out this section and add more examples/explanations/etc.
+
+\textbf{Using the Notation}\\
 The interval $[-1,\,3]$ is partitioned into $n$ subintervals of equal length $\Delta x=4/n$. Let $m_k$ denote the midpoint of the $k^{\text{th}}$ subinterval. Express the limit $\displaystyle\lim_{n\to\infty}\sum_{k=1}^n \left( 3\left(m_l\right)^2-2m_k +5 \right)\Delta x$ as an integral.
-\vspace{\stretch{1}}
+\vspace{\stretch{.5}}
+
+\newpage
+
+\phantomsection\addcontentsline{toc}{subsection}{Limit-to-Integral and Integral-to-Limit}
+\subsection*{Limit to Integral and Integral to Limit}
+This section is to be completed after finishing Unit 5: Sequences and Series. The skills required to be fluent in this section will be strengthened in that unit immensely. In my personal opinion, it would be too many unrelated skills to be able to master amongst all the other content this unit holds.
+
+There will be a standalone assessment on this topic at some point after the conclusion of Unit 5. The module involving this topic will be unlocked but not expected to be completed for quite some time.
+
+\begin{center}
+    \hspace{0pt}
+    \vfill
+    \textbf{Link to Notes}
+    \vspace{.7cm}
+    
+    \qrcode{https://drive.google.com/file/d/1NBu7JxlZUY0V1fztLIygu6aRVqlerBnX/view?usp=sharing}    
+    \vfill
+    \hspace{0pt}
+\end{center}
 
 \newpage
 
@@ -2918,47 +2951,27 @@ Often times, physical phenomena can be described by differential equations. We s
 
 \vspace{.25in}
 
-\textbf{Slope Fields:} 
+\phantomsection\addcontentsline{toc}{subsection}{Slope Fields}
+\subsection*{Slope Fields}
+
+% slope fields as take home packet and extra examples
+
+Slope Fields has been replaced with a take-home packet and quiz. This content will still be on the unit test but will not reviewed in class!! Link to Packet can be found below (clickable if using PDF version as well). Solutions can be found in the folder at start of book.
+
+    \begin{center}
+        
+        
+        \vspace{1cm}
+        
+        \qrcode{https://drive.google.com/file/d/1zI60e-JH81aCoSf6-0VDKDcLC84Jlf10/view?usp=sharing}
+        
+        \vspace{1cm}
+        This is the same link that will appear on Canvas.
+        
+        \vspace{.5cm}
+    \end{center}
+
 \begin{questions}
-    \question Consider the following differential equation $\displaystyle\frac{dy}{dx}=\frac{-x}{2y}$.
-    \begin{parts}
-        \part Sketch a slope field of the differential equation on the coordinate plane below.
-       
-        \part Sketch a possible solution to the curve that passes through $(0,\,1)$ on the coordinate plane above.
-        
-        \part Find a particular solution for the differential equation that passes through $(0,\,1)$.
-        
-        \begin{tikzpicture}[xscale=1,yscale=1,baseline=(current bounding box.north)]
-            \draw[step=1,style=help lines,] (-2.3,-2.3) grid (2.3,2.3);
-            \draw[latex-latex, thick] (-2.5,0)--(2.5,0);
-            \draw[latex-latex, thick] (0,-2.5)--(0,2.5);
-            \foreach \x in {-2,2}
-                \draw[thick] (\x,5pt) -- (\x,-5pt) node [below=.7mm,fill=white,inner sep=1pt] {\small$\x$};
-            \foreach \y in {-1,1}
-                \draw[thick] (5pt,\y) -- (-5pt,\y) node [left=.7mm,fill=white,inner sep=1pt] {\small$\y$};
-            \foreach \x in {-1,1}
-                \draw[thick] (\x,5pt) -- (\x,-5pt);
-            \foreach \y in {2,-2}
-                \draw[thick] (5pt,\y) -- (-5pt,\y);
-                
-            \foreach \x in {-2,-1,0,1,2}{
-                \filldraw[color=white] (\x,-2) circle (1.95pt);
-                \filldraw (\x,-2) circle (1.25pt);
-                \filldraw[color=white] (\x,-1) circle (1.95pt);
-                \filldraw (\x,-1) circle (1.25pt);
-                \filldraw[color=white] (\x,0) circle (1.95pt);
-                \filldraw (\x,0) circle (1.25pt);
-                \filldraw[color=white] (\x,1) circle (1.95pt);
-                \filldraw (\x,1) circle (1.25pt);
-                \filldraw[color=white] (\x,2) circle (1.95pt);
-                \filldraw (\x,2) circle (1.25pt);
-                }
-        \end{tikzpicture}
-        
-       
-        \vspace{\stretch{1}}
-        
-    \end{parts}
 
     \question Find the equation of the curve that passes through the point $(1,\,3)$ and has a slope of $\displaystyle\frac{y}{x^2}$ at the point $(x,\,y)$, as shown in the graph below.
     
@@ -2986,6 +2999,94 @@ Often times, physical phenomena can be described by differential equations. We s
 \end{questions}
 
 \newpage
+
+%add blurb about half carrying capicity is max growth rate for the DE.
+
+\phantomsection\addcontentsline{toc}{subsection}{Logistic Differential Equations}
+\subsection*{Logistic Differential Equations}
+
+Before we talk about the LDE, first let's consider the following scenario:
+\begin{questions}
+    \question Let $N(t)$ be the population of wild coyotes in observed in a study of a wildlife reserve, with $t$ in years. The growth of the population is proportional to $650$ less than the current population. Initially, there are 300 coyotes. After two years, there is observed to be 500 coyotes. Find $N(3)$.
+    
+    \vspace{\stretch{1.2}}
+\end{questions}
+
+Correct answer! However, there is something \textit{inaccurate} about our work. What is it? Why?
+
+
+
+\begin{center}
+    \underline{A 'Normal' Differential Equation}
+\end{center}
+\begin{minipage}{0.45\linewidth}
+    
+        Differential Equation: $\displaystyle\frac{dy}{dt}=ky$
+    
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\linewidth}
+    
+        General Solution: $\displaystyle y=Ce^{kt}$
+    
+\end{minipage}
+
+This type of differential equation allows for \textbf{unlimited growth}. Obviously, we do not live in a world of infinites, so there cannot be an infinite number of coyotes as time goes on. We need a \textbf{carrying capacity}, $L$, to limit our growth. 
+
+
+\begin{center}
+    \underline{The Logistic Differential Equation}
+\end{center}
+\begin{minipage}{0.45\linewidth}
+    
+        Differential Equation:\\ 
+        $\displaystyle\frac{dy}{dt}=ky\left(1-\frac{y}{L}\right)$ or $\displaystyle\frac{dy}{dt}=\frac{ky}{L}(L-y)$
+
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\linewidth}
+    
+        General Solution: $\displaystyle y=\frac{L}{Ce^{-kt}+1}$
+    
+\end{minipage}
+
+\vspace{.25in}
+
+%typo
+
+\begin{center}
+    \textbf{\large Memorize both forms of the differential equation and its general solution for the BC Exam!}
+\end{center}
+
+
+\newpage
+
+
+
+\begin{questions}
+    \setcounter{question}{1}
+    \question 40 elk are released into a game refuge. After 5 years, the population of elk is observed to be 104. The game warden says that the refuge can support no more than 4000 elk at any given time.
+    \begin{parts}
+        \part Write a differential equation for the population of elk.
+        \vspace{\stretch{1}}
+        
+        \part Write a model for the population, $P$, in terms of $t$. (Use the general solution, do not attempt to integrate!)
+        \vspace{\stretch{1}}
+    \end{parts}
+    
+    \question Find $\displaystyle\frac{d^2 y}{dx^2}$ for the general L.D.E. What can we deduce based on this function?
+    \vspace{\stretch{1}}
+\end{questions}
+
+
+\textit{\footnotesize Solving for the general solution to a LDE requires an integration method not yet covered. We will circle back and derive it as an exercise later.}
+
+
+\newpage
+\phantomsection\addcontentsline{toc}{subsection}{Euler's Method}
+\subsection*{Euler's Method}
+
+% Make own section, Larger title, add 1-2 more examples/applications of EM. Prob own page.
 
 \textbf{Euler's Method:} This is an method to approximate the particular solution of a differential equation $y'=F(x,\,y)$ that passes through $(x_0,\,y_0)$.
 
@@ -3030,76 +3131,12 @@ Often times, physical phenomena can be described by differential equations. We s
         \part approximate $y(0.8).$
         \vspace{\stretch{1}}
     \end{parts}
-\end{questions}
-
-
-\textbf{Logistic Differential Equation:} Before we talk about the LDE, first let's consider the following scenario:
-\begin{questions}
-    \question Let $N(t)$ be the population of wild coyotes in observed in a study of a wildlife reserve, with $t$ in years. The growth of the population is proportional to $650$ less than the current population. Initially, there are 300 coyotes. After two years, there is observed to be 500 coyotes. Find $N(3)$.
+    
+    \question Consider the differential equation $\displaystyle\frac{dy}{dx}=3x+2y+1$. Let $y=f(x)$ be a particular solution to the differential equation with initial condition $f(0)=2$. Use Euler's Method, starting at $x=0$, with step size of $\frac{1}{2}$, to approximate $f(1)$. (No Calc!)
     
     \vspace{\stretch{1.2}}
 \end{questions}
 
-Correct answer! However, there is something \textit{inaccurate} about our work. What is it? Why?
-
-\newpage
-
-\begin{center}
-    \underline{A 'Normal' Differential Equation}
-\end{center}
-\begin{minipage}{0.45\linewidth}
-    
-        Differential Equation: $\displaystyle\frac{dy}{dt}=ky$
-    
-\end{minipage}
-\hfill
-\begin{minipage}{0.45\linewidth}
-    
-        General Solution: $\displaystyle y=Ce^{kt}$
-    
-\end{minipage}
-
-This type of differential equation allows for \textbf{unlimited growth}. Obviously, we do not live in a world of infinites, so there cannot be an infinite number of coyotes as time goes on. We need a \textbf{carrying capacity}, $L$, to limit our growth. 
-
-
-\begin{center}
-    \underline{The Logistic Differential Equation}
-\end{center}
-\begin{minipage}{0.45\linewidth}
-    
-        Differential Equation:\\ 
-        $\displaystyle\frac{dy}{dt}=ky(1-\frac{y}{L})$ or $\displaystyle\frac{dy}{dt}=\frac{ky}{L}(L-y)$
-
-\end{minipage}
-\hfill
-\begin{minipage}{0.45\linewidth}
-    
-        General Solution: $\displaystyle y=\frac{L}{Ce^{-kt}+1}$
-    
-\end{minipage}
-
-\vspace{.25in}
-
-\begin{center}
-    \textbf{\large Memorize both all forms of the differential equation and its general solution for the BC Exam!}
-\end{center}
-
-\vspace{.25in}
-
-\begin{questions}
-    \setcounter{question}{1}
-    \question 40 elk are released into a game refuge. After 5 years, the population of elk is observed to be 104. The game warden says that the refuge can support no more than 4000 elk at any given time.
-    \begin{parts}
-        \part Write a differential equation for the population of elk.
-        \vspace{\stretch{1}}
-        
-        \part Write a model for the population, $P$, in terms of $t$. (Use the general solution, do not attempt to integrate!)
-        \vspace{\stretch{1}}
-    \end{parts}
-\end{questions}
-
-
-\textit{\footnotesize Solving for the general solution to a LDE requires an integration method not yet covered. We will circle back and derive it as an exercise later.}
 
 
 
@@ -3135,7 +3172,6 @@ This type of differential equation allows for \textbf{unlimited growth}. Obvious
     \question Determine the area of the region $R$ in the first quadrant that is bounded above by $y=\sqrt{x}$ and below by the $x$-axis and the line $y=x-2$. Use geometry to simplify this computation.
     \vspace{\stretch{1}}
 \end{questions}
-
 
 
 
@@ -3247,7 +3283,9 @@ This type of differential equation allows for \textbf{unlimited growth}. Obvious
     \question $\displaystyle x^2=(y-1)^{3}$ on $[0,\,8]$.
     \vspace{\stretch{1}}
     
-    \question $\displaystyle y=\ln(\cos x)$ from $x=0$ to $x=\pi/4$. \texttt{(Do by hand)}
+    
+    
+    \question $\displaystyle y=\ln(\cos x)$ from $x=0$ to $x=\pi/4$. \textbf{(Do by hand)}
     \vspace{\stretch{1}}
     
     \question $\displaystyle y=\frac{x^3}{6}+\frac{1}{2x}$ on $\displaystyle\left[\frac{1}{2},\,2\right]$.
@@ -3271,11 +3309,13 @@ This type of differential equation allows for \textbf{unlimited growth}. Obvious
     \end{minipage}
     \hfill
     \begin{minipage}{0.3\linewidth}
-        \part $\displaystyle\int\frac{4x^2}{x^2+9}]\,dx$
+        \part $\displaystyle\int\frac{4x^2}{x^2+9}\,dx$
     \end{minipage}
 
 
 \vspace{\stretch{1}}
+
+\newpage
 
 \begin{center}
 \textbf{Tricky Substitutions:}     
@@ -3352,6 +3392,9 @@ Up to this point, we have \textit{still} been doing only the simple-ish integral
     
     \vspace{\stretch{1}}
 \end{questions}
+
+
+%make one page (one day)
 
 
 \newpage
@@ -3433,11 +3476,12 @@ We will produce the substituions for the rest as we go and complete the table at
 
 \vspace{5in}
 
+
 \begin{longtable}[b]{|C{3.667cm}|C{3.667cm}|C{3.667cm}|C{3.7cm}|}
     \hline
     \textbf{Expression}\Tstrut\Bstrut & \textbf{Trig Substitution}\Tstrut\Bstrut & \textbf{Interval}\Tstrut\Bstrut & \textbf{Identity}\Tstrut\Bstrut \\\hline
     & & & \\
-    $\displaystyle\sqrt{a^x-x^2}$\Tstrut\Bstrut & & & \\
+    $\displaystyle\sqrt{a^2-x^2}$\Tstrut\Bstrut & & & \\
     & & & \\\hline
     & & & \\
     $\displaystyle\sqrt{a^2+x^2}$\Tstrut\Bstrut & & & \\
@@ -3454,25 +3498,24 @@ We will produce the substituions for the rest as we go and complete the table at
 \newpage
 \phantomsection\addcontentsline{toc}{subsection}{Partial Fraction Decomposition}
 \subsection*{Partial Fraction Decomposition}
+
+
+
 Let's start off this section with a simple observation:
-    \[\displaystyle\frac{3}{x+2}-\frac{2}{x-2}\,\, = \,\, \hspace{.2in}\textit{\footnotesize     some math, idk}\hspace{.2in} \,\,=\,\, \frac{x-19}{x^2-3x-10}\]
+    \[\displaystyle\frac{3}{x+2}-\frac{2}{x-5}\,\, = \,\, \hspace{.2in}\textit{\footnotesize     some math, idk}\hspace{.2in} \,\,=\,\, \frac{x-19}{x^2-3x-10}\]
 Now, let's try to evaluate $\displaystyle\int\frac{x-19}{x^2-3x-10}\,dx$. Unfortunately, there is not going to be a way to integrate this rational function in it's current form. You can try, but the $u$-substitution does not differ by a constant. RIP, I know. \\
 \\
 But, $\displaystyle\int\frac{x-19}{x^2-3x-10}\,dx=\int\left(\frac{3}{x+2}-\frac{2}{x-5}\right)\,dx=3\ln|x+2|-2\ln|x-5|+C$. \textit{\footnotesize Wow!}
 
 \vspace{.25in}
 
-\textbf{Examples:} \texttt{(Warning!! These are long)}
+\textbf{Examples:} \textbf{(Warning!! These are long)}
 \begin{questions}
     \question Use partial fraction decomposition to reduce to distinct linear factors.\\
     $\displaystyle\int\frac{1}{x^2+x-2}\,dx$
     \vspace{\stretch{1}}
     
     \newpage
-    
-    \question Again, but note that this example will require three distinct fractions.\\
-    $\displaystyle\int\frac{3x^2-7x-2}{x^3-x}\,dx$
-    \vspace{\stretch{1}}
     
     \question Closely examine this one before starting PFD.\\
     $\displaystyle\int\frac{2x^3-4x^2-15x+5}{x^2-2x-8}\,dx$
@@ -3488,6 +3531,11 @@ But, $\displaystyle\int\frac{x-19}{x^2-3x-10}\,dx=\int\left(\frac{3}{x+2}-\frac{
     \question Hmm, there seems to be something different about this one...\\
     $\displaystyle\int\frac{2x^3-2x-8}{(x^2-x)(x^2+4)}\,dx$
     
+    \vspace{\stretch{1}}
+    
+    \question Solve the differential equation: $\displaystyle\frac{dy}{dx}=ky\left(1-\frac{y}{L}\right)$
+    
+    \vspace{\stretch{.7}}
 \end{questions}
 
 
@@ -3497,8 +3545,9 @@ But, $\displaystyle\int\frac{x-19}{x^2-3x-10}\,dx=\int\left(\frac{3}{x+2}-\frac{
 \subsection*{Improper Integrals}
 \textbf{Recall} the following two conditions from theorems earlier this year:
 \begin{enumerate}
-    \item The definition of the definite integral requires that the interval $[a,\,b]$ to be finite.
-    \item The Fundamental Theorem of Calculus requires that the function be continuous on $[a,\,b]$.
+
+    \item The definition of the definite integral requires that the interval $[a,\,b]$ is finite.
+    \item The Fundamental Theorem of Calculus requires that the function is continuous on $[a,\,b]$.
 \end{enumerate}
 Integrals that do not possess these properties are called \textbf{improper integrals}, and we can still compute them with the addition of limits!
 
@@ -3573,11 +3622,13 @@ Integrals that do not possess these properties are called \textbf{improper integ
     
     \vspace{\stretch{1}}
     
+    \newpage
+    
     \question Evaluate $\displaystyle\int_{-1}^2\frac{dx}{x^3}$.
     
     \vspace{\stretch{1}}
     
-    \newpage
+    
     
     \question Evaluate $\displaystyle\int_0^\infty\frac{dx}{\sqrt{x}(x+1)}.$
     
@@ -3987,7 +4038,9 @@ Does the series converge?
 \newpage
 \phantomsection\addcontentsline{toc}{subsection}{Comparison of Series}
 \subsection*{Comparison of Series}
-One motif of the series (which you probably didn't notice) that we have been looking at is that they are relatively simple. However, with any slight complications, we can no long apply the tests in our arsenal. For example:
+
+
+One motif of the series (which you probably didn't notice) that we have been looking at is that they are relatively simple. However, with any slight complications, we can no longer apply the tests in our arsenal. For example:
 
 \begin{enumerate}
     \item $\displaystyle\sum_{n=0}^\infty\frac{1}{2^n}$ is geometric, but $\displaystyle\sum_{n=0}^{\infty}\frac{n}{2^n}$ is not.
@@ -4120,10 +4173,41 @@ The reason why this is the case is hard to conceptualize, so perhaps a proof mig
 Consequently, $\displaystyle\left|S-S_N\right|=|R_N|\le a_{N+1}$, which establishes the theorem.
 
 
-\noindent\textbf{Example:}\\
-Approximate the sum of the following series by its first six terms.
-\[\displaystyle\sum_{n=1}^{\infty}(-1)^{n+1}\left(\frac{1}{n!}\right)=\frac{1}{1!}-\frac{1}{2!}+\frac{1}{3!}-\frac{1}{4!}+\frac{1}{5!}-\frac{1}{6!}+\cdots\]
-\vspace{\stretch{1}}
+
+\newpage
+
+\noindent\textbf{Examples:}\\
+\begin{questions}
+    \question Consider the following series:
+    \[\displaystyle\sum_{n=1}^{\infty}(-1)^{n+1}\left(\frac{1}{n!}\right)=\frac{1}{1!}-\frac{1}{2!}+\frac{1}{3!}-\frac{1}{4!}+\frac{1}{5!}-\frac{1}{6!}+\cdots\]
+    \begin{parts}
+        \part Approximate the sum of the series using the first six terms.
+        
+        
+        
+        \part What is the error associated with this approximation?
+        
+        
+        
+        \part What is the interval for which the true sum of the series, $S$, must lie within? (Use the previous two answers)
+        
+        \vspace{\stretch{1}}
+    \end{parts}
+    
+    \question Consider the series $\displaystyle\sum_{n=0}^\infty \frac{(-1)^n \cdot 3^{n+1}}{2^{2n}}$.
+    \begin{parts}
+        \part Find the maximum error associated with the approximation of $S_4$.
+        \part How many terms would it take for the error to be less than $\frac{1}{200}$?
+    \end{parts}
+    
+    
+    \vspace{\stretch{1}}
+    
+    
+    
+    
+\end{questions}
+
 
 
 
@@ -4134,7 +4218,10 @@ Approximate the sum of the following series by its first six terms.
 \phantomsection\addcontentsline{toc}{subsection}{Conditional and Absolute Convergence}
 \subsection*{Absolute and Conditional Convergence}
 Occasionally, we run into series that have both positive and negative terms but is \textbf{not} an alternating series. For example:
-\[\displaystyle\sum_{n=1}^{\infty}\frac{\sin n}{n^2}=\frac{\sin1}{1}+\frac{\sin4}{4}+\frac{\sin3}{9}+\cdots\]
+
+
+
+\[\displaystyle\sum_{n=1}^{\infty}\frac{\sin n}{n^2}=\frac{\sin1}{1}+\frac{\sin2}{4}+\frac{\sin3}{9}+\cdots\]
 In order to obtain any information about the convergence of this series, let's instead consider
 \[\displaystyle\sum_{n=1}^{\infty}\left|\frac{\sin n}{n^2}\right|.\]
 \vspace{\stretch{1}}
@@ -4190,7 +4277,7 @@ Determine whether each of the series is convergent or divergent. Classify any co
 \phantomsection\addcontentsline{toc}{subsection}{Ratio and Root Tests}
 \subsection*{Ratio and Root Tests}
 
-\begin{tcolorbox}[title= THE RATIO TEST,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= THE RATIO TEST,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     Let     $\displaystyle\sum a_n$ be a series with nonzero terms.
     \begin{enumerate}
@@ -4514,7 +4601,7 @@ As these are approximations, they will not be exactly equal to the original func
 
 \vspace{.2in}
 
-So, $\displaystyle R_n(x)=f(x)-P_n(x)$. The absolute vale of $\displaystyle R_n(x)$ is called the \textbf{error} associated with the approximation. That is,
+So, $\displaystyle R_n(x)=f(x)-P_n(x)$. The absolute value of $\displaystyle R_n(x)$ is called the \textbf{error} associated with the approximation. That is,
 \[\text{ERROR}=|R_n(x)|=|f(x)-P_n(x)|.\]
 
 The following theorem is called \textbf{Taylor's Theorem}, and the remainder given in the theorem is called the \textbf{Lagrange form of the remainder}. You should know both names as synonymous.
@@ -4531,7 +4618,7 @@ The following theorem is called \textbf{Taylor's Theorem}, and the remainder giv
 One thing to note when using this theorem is that $\displaystyle \left|R_n(x)\right|\le\frac{|x-c|^{n+1}}{(n+1)!}\max\left|f^{(n+1)}(z)\right|$ where $\max\left|f^{(n+1)}(z)\right|$ is the maximum value of $\left|f^{(n+1)}(z)\right|$ between $x$ and $c$.\\
 \\
 \noindent\textbf{Example:}\\
-The third Maclaurin polynomial for $\sin x$ is given by $\displaystyle P_3(x)=x-\frac{x^3}{3!}$. Use Taylor's Theorem to approximate $\sin(0.1)$ by $P_3(0.1)$ and determine the accuracy of the approximation.
+The third Maclaurin polynomial for $\sin x$ is given by $\displaystyle P_3(x)=x-\frac{x^3}{3!}$. Use Taylor's Theorem to approximate $\sin(0.1)$ by $P_3(0.1)$ and determine the error of the approximation.
 
 
 \newpage
@@ -4559,6 +4646,8 @@ The third Maclaurin polynomial for $\sin x$ is given by $\displaystyle P_3(x)=x-
     \vspace{\stretch{1}}
     
     \newpage
+    
+    %%% check this section!
     
     \begin{minipage}[t]{0.45\linewidth}
     \question Let $\displaystyle P_4(x)=1+\frac{x^2}{2}+\frac{x^4}{4!}$ be the fourth-degree Taylor Polynomial for $f$ about $x=0$. Using the information from the graph of $\displaystyle \left|f^{(5)}(x)\right|$ shown to the right, show that \[\displaystyle\left|P_4\left(\frac{1}{4}\right)-f\left(\frac{1}{4}\right)\right|<\frac{1}{3000}.\]
@@ -4594,7 +4683,7 @@ The third Maclaurin polynomial for $\sin x$ is given by $\displaystyle P_3(x)=x-
     \vspace{\stretch{1}}
     
     \question The Taylor Series about $x=3$ for a certain function $f$ converges to $f(x)$ for all $x$ in the interval of convergence. The $n$th derivative of $f$ at $x=3$ is given by 
-    \[\displaystyle f^{(n)}(3)=\frac{(-1)^n \, n!}{5^n\, (n+3)}\text{ and }f(3)=\frac{1}{3}.\]
+    \[\displaystyle f^{(n)}(3)\le\frac{(-1)^n \, n!}{5^n\, (n+3)}\text{for all \textit{n} and }f(3)=\frac{1}{3}.\]
     Show that $P_3(x)$ approximates $f(4)$ with an error less than $\displaystyle\frac{1}{4000}$.
     
     \vspace{\stretch{1}}
@@ -4665,9 +4754,10 @@ where the \textbf{domain of \textit{f}} is the set of all $x$ values for which t
 \\
 \noindent\textbf{Examples:} Find the interval of Convergence.
 \begin{questions}
-    \question $\displaystyle\sum_{n=0}^{\infty}\frac{x^n}{n}$
+    \question $\displaystyle\sum_{n=1}^{\infty}\frac{x^n}{n}$
     \vspace{\stretch{1}}
-    \question$\displaystyle\sum_{n=0}^{\infty}\frac{x^n}{n^2}$
+    
+    \question$\displaystyle\sum_{n=1}^{\infty}\frac{x^n}{n^2}$
     \vspace{\stretch{1}}
 \end{questions}
 
@@ -4695,7 +4785,7 @@ where the \textbf{domain of \textit{f}} is the set of all $x$ values for which t
             &= C + a_0 (x-c)+ a_1\frac{(a-c)^2}{2}+a_2\frac{(x-c)^3}{3}+\cdots
         \end{align*}
     
-    The \textit{radius of convergence} of the series obtained by differentiating or integrating a power series is the same of that of the original series. The \textit{interval of convergence}, however, may differ as a result of the behavior of the end points.
+    The \textit{radius of convergence} of the series obtained by differentiating or integrating a power series is the same as the original series. The \textit{interval of convergence}, however, may differ because of the behavior of the end points.
     
 \end{tcolorbox}
 \vspace{.1cm}
@@ -4748,7 +4838,7 @@ The final type of series involves functions written in the form $\displaystyle f
         \end{minipage}
         \hfill
         \begin{minipage}{0.45\linewidth}
-            \part $\displaystyle f(x)=\artcan(x)$
+            \part $\displaystyle f(x)=\arctan(x)$
         \end{minipage}
     \end{parts}
 
@@ -4786,7 +4876,7 @@ The final type of series involves functions written in the form $\displaystyle f
 
 \begin{tcolorbox}[black,sharp corners,colback=white,boxrule=.25mm]
     \begin{center}
-        \textbf{MEMORIZE THESE SERIES}
+        \textbf{MEMORIZE KNOWN MACLAURIN SERIES} 
     \end{center}
     
     \vspace{.08cm}
@@ -5073,15 +5163,17 @@ Parametric, Vector, and (eventually) Polar are all essentially the same. In this
     \end{tikzpicture}
 \end{minipage}
 
-\begin{tcolorbox}[title= COORDINATE CONVERSION EQUATIONS ,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= COORDINATE CONVERSION EQUATIONS ,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+
+    
 
     Let the point $P$ have polar coordinates $(r,\,\theta)$ and rectangular coordinates $(x,\,y)$. Then
     \begin{minipage}[t]{.45\linewidth}
-        \[x=r\cos x\]
+        \[x=r\cos \theta\]
     \end{minipage}
     \hfill
     \begin{minipage}[t]{.45\linewidth}
-        \[y=r\sin x\]
+        \[y=r\sin \theta\]
     \end{minipage}
     
     \begin{minipage}[t]{.45\linewidth}
@@ -5212,9 +5304,11 @@ Parametric, Vector, and (eventually) Polar are all essentially the same. In this
 \phantomsection\addcontentsline{toc}{subsection}{Polar Equations \& Calculus}
 \subsection*{Polar Equations \& Calculus}
 
-\begin{tcolorbox}[title= SLOPE IN POLAR FORM ,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= SLOPE IN POLAR FORM ,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
-    If $f$ is a differentiable function of $\theta$, then the slope of the tangent line to the graph of $r=f(\theta)$ at the point $(r,\,\theta)$ is
+    %f to r in definition
+    
+    If $r$ is a differentiable function of $\theta$, then the slope of the tangent line to the graph of $r=f(\theta)$ at the point $(r,\,\theta)$ is
     \[\frac{dy}{dx}=\frac{dy/d\theta}{dx/d\theta}=\frac{r\cos\theta+r'\sin\theta}{-r\sin\theta+r'\cos\theta}\]
     provided that $dx/d\theta\ne0$ at $(r,\,\theta)$.
     
@@ -5285,6 +5379,27 @@ From this, we get two main deductions:
 
 \newpage
 
+\hspace{0pt}
+\vfill
+\begin{center}
+    \textbf{The End}
+\end{center}
+\vfill
+\hspace{0pt}
+
+
+\newpage
+
+
+
+%% add cram sheet or something like it to appendix
+
+%% add series tests summary to end of book
+
+\phantomsection\addcontentsline{toc}{section}{Appendix}
+\phantomsection\addcontentsline{toc}{subsection}{Hierarchy of Functions}
+
+
 \begin{center}
     \textbf{\Huge Hierarchy of Functions}
 \end{center}
@@ -5327,13 +5442,120 @@ From this, we get two main deductions:
 \newpage
 
 
-\hspace{0pt}
-\vfill
-\begin{center}
-    \textbf{The End}
-\end{center}
-\vfill
-\hspace{0pt}
+\phantomsection\addcontentsline{toc}{subsection}{Definitions and Theorems}
 
+\begin{multicols}{2}
+
+\small
+
+\RaggedRight
+
+\entry{Continuity}{A function $f(x)$ is continuous at $x=a$ if all of the following are true: (i) $f(a)$ exists (ii) $\lim_{x\to a}f(x)$ exists (iii) $\lim_{x\to a}f(x)=f(a)$.}
+
+\entry{Intermediate Value Theorem}{If function $f(x)$ is continuous on a closed interval $[a,\,b]$ and if $y$ is any number between $f(a)$ and $f(b)$, then there is at least one number $c\in[a,\,b]$ such that $f(c)=y$.}
+
+\entry{Limit Theorem}{$\lim_{x\to a}f(x)=L$ if and only if $\lim_{x\to a^+}f(x)=L=\lim_{x\to a^-}f(x)$.}
+
+\entry{Squeeze Theorem}{If $f(x)\le g(x)\le h(x)$ and $\lim_{x\to c}f(x)=\lim_{x\to c}h(x)=L$, then $\lim_{x\to c}g(x)=L)$.}
+
+\entry{Definition of Derivative}{$f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}$ or $f'(x)=\lim_{x\to c}\frac{f(x)-f(c)}{x-c}$.}
+
+\entry{Diff. - Cont. Theorem}{If a function is differentiable at $x=a$, then it is continuous at $x=a$.}
+
+\entry{Mean Value Theorem}{If $f(x)$ is continuous on the closed interval $[a,\,b]$ and differentiable on the open interval $(a,\,b)$, then there is at least one number $c$ between $a$ and $b$ such that $f'(c)=\frac{f(b)-f(a)}{b-a}$.}
+
+\entry{Average Value Theorem}{The average value of $f$ on $[a,\,b]$ is: $f_ave=\frac{1}{b-a}\int_a^b f(x)\,dx$.}
+
+\entry{Derivative of Inverse}{$g'(c)=\frac{1}{f'(g(c))}$.}
+
+\entry{Linearization}{$L(x)=f(a)+f'(a)(x-a)$.}
+
+\entry{Critical Point}{A number $c$ in the domain of a function $f$ is a critical point of $f$ if either $f'(c)=0$ or DNE.}
+
+\entry{Extrema}{Critical points that are either a local/absolute max/min.}
+
+\entry{Point of Inflection}{Points of inflection of $f(x)$ are the point on the domain of $f$ where $f''(x)=0$ or DNE and $f''$ changes sign at that point.}
+
+\entry{Extreme Value Theorem}{If $f$ is continuous on a closed interval $[a,\,b]$, then $f$ has both an absolute max and absolute min value on $[a,\,b]$.}
+
+\entry{Fundamental Theorem of Calculus}{$\int_a^b f(x)\,dx=F(b)-F(a)$ and $\frac{d}{dx}\int_a^x f(t)\,dt=f(x)$.}
+
+\entry{Position}{$s(t)=\int v(t)\,dt$.}
+
+\entry{Velocity}{$v(t)=s'(t)$ or $v(t)=\int a(t)\,dt$.}
+
+\entry{Acceleration}{$a(t)=v'(t)=s''(t)$.}
+
+\entry{Speed}{$\text{Speed}=\|v(t)|=\sqrt{(x'(t))^2+(y'(t))^2}$. Speed increases when $v(t)$ and $a(t)$ have the same sign. Speed decreases when $v(t)$ and $a(t)$ have different signs.}
+
+\entry{Total Distance}{Total Distance from time $a$ to $b$ is $\int_a^b |v(t)|\,dt$.}
+
+\entry{Net Distance (Change)}{$\int _a^b v(t)\,dt$.}
+
+\entry{Area in the Plane}{$A=\int_a^b(f(x)-g(x))\,dx$ where $f\ge g$ on $[a,\,b]$.}
+
+\entry{Volume by Disks}{$V=\pi\int_a^b R^2\,dx$ (horizontal) or $V=\pi\int_c^d R^2\,dy$ (vertical).}
+
+\entry{Volume by Washers}{$V=\pi\int_a^b (R^2-r^2)\,dx$ (horizontal) or $V=\pi\int_c^d (R^2-r^2)\,dy$ (vertical).}
+
+\entry{Volume by Cross Sections}{$V=\pi\int_a^b A(x)\,dx$ (if perpendicular to $x$-axis) or $V=\pi\int_c^d A(y)\,dy$ (if perpendicular to $y$-axis).}
+
+\entry{Arc Length}{$L=\int_a^b\sqrt{1+[f'(x)]^2}\,dx$ or $L=\int_c^d\sqrt{1+[f'(y)]^2}\,dy$.}
+
+\entry{L'Hospital's Rule}{If $\lim_{x\to c}\frac{f}{g}$ is of the form $0/0$ or $\infty/\infty$, then $\lim_{x\to c}\frac{f}{g}=\lim_{x\to c}\frac{f'}{g'}$.}
+
+\entry{Improper Integrals}{An integral $\int_a^b f(x)\,dx$ is improper if any bound is infinite or $f$ has at least one discontinuity on the interval $[a,\,b]$. Evaluate using limits.}
+
+\entry{Parametric Slope}{$\frac{dy}{dx}=\frac{dy/dt}{dx/dt}$.}
+
+\entry{Parametric 2nd Deriv.}{$\frac{d^2 y}{dx^2}=\frac{\frac{d}{dx}(dy/dx)}{dx/dt}$.}
+
+\entry{Parametric Arc Length}{$L=\int_a^b\sqrt{[x'(t)]^2+[y'(t)]^2}\,dx$.}
+
+\entry{Polar Slope}{$\frac{dy}{dx}=\frac{r\cos\theta+r'\sin\theta}{-r\sin\theta+r'\cos\theta}$.}
+
+\entry{Polar Area}{$A=\frac{1}{2}\int_a^b r^2\,d\theta$ or $A=\frac{1}{2}\int_a^b (f(\theta))^2\,d\theta$.}
+
+\entry{Area Between Polar Curves}{$A=\frac{1}{2}\int_a^b [R^2-r^2]\,d\theta$.}
+
+\entry{Vector Position}{$s(t)=\langle x(t),\,y(t)\rangle$.}
+
+\entry{Vector Velocity}{$v(t)=s'(t)=\langle x'(t),\,y'(t)\rangle$.}
+
+\entry{Vector Acceleration}{$a(t)=v'(t)=s''(t)=\langle x''(t),\,y''(t)\rangle$.}
+
+\entry{Vector Speed}{$|v(t)|=\sqrt{(x't)^2+(y'(t))^2}$.}
+
+
+\end{multicols}
+
+\vspace{.5 in}
+
+\phantomsection\addcontentsline{toc}{subsection}{Series Tests Summary}
+
+\begin{center}
+    \textbf{\large Summary of Convergence Tests}
+    
+    \vspace{.2in}
+    
+    \qrcode{http://people.math.binghamton.edu/alex/EXAMS_PUBLIC/Convergence_Handout.pdf}
+\end{center}
+
+\vspace{\stretch{1}}
+
+\phantomsection\addcontentsline{toc}{subsection}{A Quote}
+
+\begin{center}
+    \fbox{\fbox{\parbox{5.5in}{
+    \textbf{A Quote:}\\
+    Considering how many fools can calculate, it is surprising that it should be thought either a difficult or tedious task for any other fool to learn how to master the same tricks.\\ 
+    
+    Some calculus-tricks are quite easy. Some are enormously difficult. The fools who write the textbooks of advanced mathematics -- and they are mostly clever fools -- seldom take the trouble to show you how easy the easy calculations are. On the contrary, they seem to desire to impress you with their tremendous cleverness by going about it in the most difficult way.\\ 
+    
+    Being myself a remarkably stupid fellow, I have had to unteach myself the difficulties, and now beg to present to my fellow fools the parts that are not hard. \textbf{Master these thoroughly, and the rest will follow...}}}}
+\end{center}
+
+
+\vspace{\stretch{1}}
 
 \end{document}
