@@ -208,7 +208,7 @@ In short, we can interpret the limit as the expected $y$-value of a function. It
 
 \newpage
 
-\begin{tcolorbox}[title= DEFINITION OF THE EXISTENCE OF A LIMIT,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= DEFINITION OF THE EXISTENCE OF A LIMIT,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     A funciton has a limit as $x$ approaches $c$ if and only if the right hand limit and the left hand limit at a point $c$ are the same. That is
     
@@ -258,7 +258,7 @@ In short, we can interpret the limit as the expected $y$-value of a function. It
     $\displaystyle f(4)=$   &   &   &   \\\
                             &   &   &   \\\hline
     $\displaystyle f(5)=$   &   &   &   \\
-                            &   &   &   \hline
+                            &   &   &   \\\hline
 \end{longtable}
 
 \newpage
@@ -290,7 +290,7 @@ A limit is the value of the function we \textbf{approach} as we near a particula
 
 \phantomsection\addcontentsline{toc}{subsection}{Properties of Limits}
 \subsection*{Properties of Limits}
-\begin{tcolorbox}[title= PROPERTIES OF LIMITS,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= PROPERTIES OF LIMITS,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     Let $f$ and $g$ be functions such that $\displaystyle\lim_{x\to c}f(x)=L$ and $\displaystyle\lim_{x\to c}g(x)=M$ for real numbers $L,\,M,\,c,$ and $k$. Then the following properties of limits exist:\\
     \begin{enumerate}
@@ -350,7 +350,7 @@ For problems involving polynomial and rational functions, we can determine the r
 
 \newpage
 
-\begin{tcolorbox}[title= SHORTCUT FOR EVALUATING LIMITS AT INFINITY,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= SHORTCUT FOR EVALUATING LIMITS AT INFINITY,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     Let $\displaystyle\frac{f(x)}{g(x)}$ be a rational function.
     \begin{enumerate}
@@ -386,7 +386,7 @@ For problems involving polynomial and rational functions, we can determine the r
 \end{questions}
 
 
-\begin{tcolorbox}[title= LIMITS AND ASYMPTOTES,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= LIMITS AND ASYMPTOTES,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     If $\displaystyle\lim_{x\to a^-}f(x)=\pm\infty$ or if $\displaystyle\lim_{x\to a^+}f(x)=\pm\infty$, then the line $x=a$ is a \textbf{vertical asymptote} of the graph $f(x)$.\\
     
@@ -400,7 +400,7 @@ For problems involving polynomial and rational functions, we can determine the r
 \newpage
 \phantomsection\addcontentsline{toc}{subsection}{Continuity}
 \subsection*{Continuity}
-\begin{tcolorbox}[title= TEST FOR CONTINUITY,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= TEST FOR CONTINUITY,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     A function $f(x)$ is \textbf{continuous} on a given interval if and only if all three of the following are true:
     \begin{enumerate}
@@ -459,7 +459,7 @@ For problems involving polynomial and rational functions, we can determine the r
 
 \newpage
 
-\begin{tcolorbox}[title= PROPERTIES OF CONTINUOUS FUNCTIONS,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= PROPERTIES OF CONTINUOUS FUNCTIONS,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     If $f$ and $g$ are continuous at $x=c$, then the following combinations are continuous at $x=c$.
     \begin{enumerate}
@@ -483,7 +483,7 @@ For problems involving polynomial and rational functions, we can determine the r
 
 \phantomsection\addcontentsline{toc}{subsection}{Intermediate Value Theorem}
 \subsection*{Intermediate Value Theorem}
-\begin{tcolorbox}[title= THE INTERMEDIATE VALUE THEOREM,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= THE INTERMEDIATE VALUE THEOREM,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     A function $y=f(x)$ that is continuous on a closed interval $[a,\,b]$ takes on every value between $f(a)$ and $f(b)$. In other words, if $f(a)\le y_0\le f(b)$, then $y_0=f(c)$ for some $c\in[a,\,b]$.
 \end{tcolorbox}
@@ -518,8 +518,8 @@ The \textbf{average rate of change} of a quantity over a period of time is the a
     
     \node at (23,15)[anchor=north west,fill=white,inner sep=1pt]{$(23,\,150)$};
     \node at (45,34) [anchor=north west,fill=white,inner sep=1pt] {$(45,\,340)$};
-    \node[circle,draw=black, fill=black, inner sep=0pt,minimum size=3pt] at (23,15);
-    \node[circle,draw=black, fill=black, inner sep=0pt,minimum size=3pt] at (45,34);
+    \node[circle,draw=black, fill=black, inner sep=0pt,minimum size=3pt] at (23,15) {};
+    \node[circle,draw=black, fill=black, inner sep=0pt,minimum size=3pt] at (45,34) {};
     
     \draw[-,thick,shorten <=-.3cm] (0,1) to [out=0,in=250] (23,15);
     \draw[-,thick,shorten >=-.3cm] (23,15) to[out=70,in=-170] (45,34);
@@ -558,7 +558,7 @@ What is the instantaneous rate of change at $x=1$?
 \newpage
 
 
-\begin{tcolorbox}[title= DEFINITION OF TANGENT LINE WITH SLOPE \textit{m},black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= DEFINITION OF TANGENT LINE WITH SLOPE \textit{m},colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     If $f$ is defined on an open interval containing $c$, and if the limit
     \[\lim_{\Delta x\to0}\frac{\Delta y}{\Delta x}=\lim_{\Delta x\to0}\frac{f(c+\Delta x)-f(c)}{\Delta x}=m\]
@@ -586,7 +586,7 @@ What is the instantaneous rate of change at $x=1$?
 \phantomsection\addcontentsline{toc}{section}{Derivatives}
 \phantomsection\addcontentsline{toc}{subsection}{Definition of the Derivative}
 \subsection*{Definition of the Derivative}
-\begin{tcolorbox}[title= DEFINITION OF THE DERIVATIVE OF A FUNCTION,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= DEFINITION OF THE DERIVATIVE OF A FUNCTION,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     The \textbf{derivative} of $f$ at $x$ is given by
     \[f'(x)=\lim_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x}\]
@@ -803,7 +803,7 @@ Similarly, attempt with the graph of $y=\cos x$.
     \end{tikzpicture}
 \end{center}
 \vspace{.05cm}
-\begin{tcolorbox}[title= DERIVATIVES OF SINE AND COSINE,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= DERIVATIVES OF SINE AND COSINE,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     \begin{align*}
         \frac{d}{dx}(\sin x) &= \hspace{1.5cm} & \frac{d}{dx}(\cos x) &= \hspace{1.5cm}
@@ -832,7 +832,7 @@ Find the derivative of each of the following.
 \subsection*{The Chain Rule}
 In your head, consider the derivative of the function $y=(3x+4)^2$. To do it, we have to "take the derivative of the inside". More formally, this is another differentiation rule that we call the \textbf{Chain Rule}.\\
 
-\begin{tcolorbox}[title= THE CHAIN RULE,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= THE CHAIN RULE,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     If $y=f(u)$ is a differentiable function of $u$ and $u=g(x)$ is a differentiable function of $x$, then $y=f(g(x))$ is a differentiable function of $x$ and 
     \[\frac{dy}{dx}=\frac{dy}{du}\cdot\frac{du}{dx}\]
@@ -841,7 +841,7 @@ In your head, consider the derivative of the function $y=(3x+4)^2$. To do it, we
     
 \end{tcolorbox}
 \vspace{.15cm}
-\nodindent\textbf{Examples:}
+\noindent\textbf{Examples:}
 \begin{questions}
     \question Suppose that functions $f$ and $g$ and their derivatives have the following values at $x=2$ and $x=3$.
     \begin{longtable}[ht]{|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
@@ -853,31 +853,31 @@ In your head, consider the derivative of the function $y=(3x+4)^2$. To do it, we
     Evaluate  the derivatives with respect to $x$ of the following combinations at the given value of $x$
     \begin{parts}
         \begin{minipage}{.45\linewidth}
-            \question $\displaystyle 2f(x),\, x=2 $
+            \part $\displaystyle 2f(x),\, x=2 $
         \end{minipage}
         \hfill
         \begin{minipage}{.45\linewidth}
-            \question $\displaystyle f(x)\cdot g(x),\, x=3$
+            \part $\displaystyle f(x)\cdot g(x),\, x=3$
         \end{minipage}
         
         \vspace{\stretch{1}}
         
         \begin{minipage}{.45\linewidth}
-            \question $\displaystyle \frac{f(x)}{g(x)},\, x=2$
+            \part $\displaystyle \frac{f(x)}{g(x)},\, x=2$
         \end{minipage}
         \hfill
         \begin{minipage}{.45\linewidth}
-            \question $\displaystyle f(g(x)),\,x=2$
+            \part $\displaystyle f(g(x)),\,x=2$
         \end{minipage}
         
         \vspace{\stretch{1}}
         
         \begin{minipage}{.45\linewidth}
-            \question $\displaystyle \frac{1}{g^2(x)},\,x=3$
+            \part $\displaystyle \frac{1}{g^2(x)},\,x=3$
         \end{minipage}
         \hfill
         \begin{minipage}{.45\linewidth}
-            \question $\displaystyle \sqrt{f^2(x)+g^2(x)},\,x=2$
+            \part $\displaystyle \sqrt{f^2(x)+g^2(x)},\,x=2$
         \end{minipage}
         
         \vspace{\stretch{1}}
@@ -888,11 +888,11 @@ In your head, consider the derivative of the function $y=(3x+4)^2$. To do it, we
     \question Find $\displaystyle\frac{dy}{dx}$ for the two similar functions.
     \begin{parts}
         \begin{minipage}{.45\linewidth}
-            \question $\displaystyle \frac{d}{dx}\left(\sin^2 x\right)=$
+            \part $\displaystyle \frac{d}{dx}\left(\sin^2 x\right)=$
         \end{minipage}
         \hfill
         \begin{minipage}{.45\linewidth}
-            \question $\displaystyle \frac{d}{dx}\left(\sin x^2\right)=$
+            \part $\displaystyle \frac{d}{dx}\left(\sin x^2\right)=$
         \end{minipage}
     \end{parts}
     
@@ -916,7 +916,7 @@ In your head, consider the derivative of the function $y=(3x+4)^2$. To do it, we
 \newpage
 \phantomsection\addcontentsline{toc}{subsection}{Derivatives of Trigonometric Functions}
 \subsection*{Derivatives of Trigonometric Functions}
-\begin{tcolorbox}[title= DERIVATIVE RULES FOR ALL TRIG FUNCTIONS,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= DERIVATIVE RULES FOR ALL TRIG FUNCTIONS,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     \begin{align*}
         \frac{d}{dx}(\sin u) &= \cos u\frac{du}{dx} & \frac{d}{dx}(\csc u) &= -\csc u\cot u\frac{du}{dx}\\
@@ -943,7 +943,7 @@ Try out the following derivatives. Remember, \textbf{all other derivative rules 
 \phantomsection\addcontentsline{toc}{subsection}{Implicit Differentiation}
 \subsection*{Implicit Differentiation}
 What we have been doing so far is explicit differentiation, as $y$ has always been an explicit function of $x$. Today, we will continue our journey of taking derivatives but now with equations that are not functions!\\
-\begin{tcolorbox}[title= STEPS FOR IMPLICIT DIFFERENTIATION,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= STEPS FOR IMPLICIT DIFFERENTIATION,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
     \begin{enumerate}
         \item Differentiate both sides of the equation with respect to $x$, doing $x$ as you normally would. The derivative of $y$ becomes $dy/dx$ or $y'$.
         \item Collect terms with $dy/dx$ on one side of the equation.
@@ -952,7 +952,7 @@ What we have been doing so far is explicit differentiation, as $y$ has always be
     \end{enumerate}
 \end{tcolorbox}
 \vspace{.15cm}
-\nodindent\textbf{Examples:} Find $\displaystyle\frac{dy}{dx}$.
+\noindent\textbf{Examples:} Find $\displaystyle\frac{dy}{dx}$.
 \begin{questions}
     \begin{minipage}{.45\linewidth}
     \question $\displaystyle y^2=x$
@@ -1012,7 +1012,7 @@ Two more examples of second derivatives (time-permitting):
 \newpage
 \phantomsection\addcontentsline{toc}{subsection}{Derivatives of Transcendental Functions}
 \subsection*{Derivatives of Transcendental Functions}
-\begin{tcolorbox}[title= DERIVATIVES OF INVERSE TRIGONOMETRIC FUNCTIONS,black,sharp corners, colback=white, colbacktitle=white, coltitle=black, boxrule=1pt]
+\begin{tcolorbox}[title= DERIVATIVES OF INVERSE TRIGONOMETRIC FUNCTIONS,colframe=black,sharp corners, colback=white, colbacktitle=white, coltitle=black, boxrule=1pt]
     
     Let $u$ be a differentiable function of $x$.
     \begin{align*}
@@ -1046,7 +1046,7 @@ Two more examples of second derivatives (time-permitting):
 \end{questions}
 
 
-\begin{tcolorbox}[title= DERIVATIVES OF THE EXPONENTIAL FUNCTION,black,sharp corners, colback=white, colbacktitle=white, coltitle=black, boxrule=1pt]
+\begin{tcolorbox}[title= DERIVATIVES OF THE EXPONENTIAL FUNCTION,colframe=black,sharp corners, colback=white, colbacktitle=white, coltitle=black, boxrule=1pt]
     
     Let $u$ be a differentiable function of $x$.
     \begin{align*}
@@ -1089,7 +1089,7 @@ Two more examples of second derivatives (time-permitting):
 
 \newpage
 
-\begin{tcolorbox}[title= DERIVATIVES OF THE LOGARITHMIC FUNCTION,black,sharp corners, colback=white, colbacktitle=white, coltitle=black, boxrule=1pt]
+\begin{tcolorbox}[title= DERIVATIVES OF THE LOGARITHMIC FUNCTION,colframe=black,sharp corners, colback=white, colbacktitle=white, coltitle=black, boxrule=1pt]
     
     Let $u$ be a differentiable function of $x$.
     \begin{align*}
@@ -1170,7 +1170,7 @@ For the two previous problems, we could use properties of logs to make life much
 \phantomsection\addcontentsline{toc}{subsection}{Differentiability \& Graphing Derivatives}
 \subsection*{Differentiability \& Graphing Derivatives}
 Recall...
-\begin{tcolorbox}[title= DEFINITION OF THE DERIVATIVE OF A FUNCTION,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= DEFINITION OF THE DERIVATIVE OF A FUNCTION,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     The \textbf{derivative} of $f$ at $x$ is given by
     \[f'(x)=\lim_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x}\]
@@ -1539,7 +1539,7 @@ Extreme values help us answer questions like, \textit{What is the most effective
 \end{minipage}
 \vspace{1cm}
 
-\begin{tcolorbox}[title= THE EXTREME VALUE THEOREM,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= THE EXTREME VALUE THEOREM,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     If $f(x)$ is continuous on the closed interval $[a,\,b]$, then $f(x)$ has both a maximum value and a minimum value on the interval.
     
@@ -1551,7 +1551,7 @@ Naturally the question becomes: \textbf{How can we find the extreme values?} \un
 \newpage
 
 
-\begin{tcolorbox}[title= DEFINITION OF LOCAL EXTREME VALUES,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= DEFINITION OF LOCAL EXTREME VALUES,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     If a function $f(x)$ has a local maximum or minimum value at an interior point $c$ of its domain, and if $f'(x)$ exists at $c$, then $f'(c)=0$. 
     
@@ -1565,7 +1565,7 @@ But sometimes a maximum or a minimum may occur when $f'(c)\ne0$. What might caus
 
 Instead, lets introduce a definition that encompasses ALL these points:\\
 
-\begin{tcolorbox}[title= DEFINITION OF A CRITICAL POINT,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= DEFINITION OF A CRITICAL POINT,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     Let $f$ be defined at $c$. If $f'(c)=0$ or if $f$ is not differentiable at $c$, then $c$ is a \textbf{critical point} (or \textbf{critical number}) of $f$.\\
     \\
@@ -1605,7 +1605,7 @@ Find the extrema of $f(x)=3x^4-4x^3$ on the interval $[1,\,2]$.
 
 \newpage
 
-\begin{tcolorbox}[title= THE FIRST DERIVATIVE TEST,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= THE FIRST DERIVATIVE TEST,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     The following applies to a continuous function $f(x)$.
     \begin{questions}
@@ -1647,7 +1647,7 @@ There are times when a curve can hold water or spill water. We call this ability
 \newpage
 
 
-\begin{tcolorbox}[title= THE SECOND DERIVATIVE TEST,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= THE SECOND DERIVATIVE TEST,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     \begin{questions}
         \question If $f'(c)=0$ and $f''(c)<0$, then $f(x)$ has a local maximum at $x=c$.
@@ -1674,7 +1674,7 @@ There are times when a curve can hold water or spill water. We call this ability
 \phantomsection\addcontentsline{toc}{subsection}{Curve Sketching}
 \subsection*{Curve Sketching}
 
-\begin{tcolorbox}[black,sharp corners,colback=white,boxrule=.25mm]
+\begin{tcolorbox}[colframe=black,sharp corners,colback=white,boxrule=.25mm]
     \begin{center}
         \textbf{Summary for Graphing Functions}
     \end{center}
@@ -1963,7 +1963,7 @@ There are times when a curve can hold water or spill water. We call this ability
 \phantomsection\addcontentsline{toc}{subsection}{Mean Value Theorem}
 \subsection*{Mean Value Theorem \textit{\tiny (for derivatives)}}
 
-\begin{tcolorbox}[title= THE MEAN VALUE THEOREM,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= THE MEAN VALUE THEOREM,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     If $f$ is continuous on the closed interval $[a,\,b]$ and differentiable in the open interval $(a,\,b)$, then there exists a number $c$ in $(a,\,b)$ such that
     \[f'(c)=\frac{f(b)-f(a)}{b-a}.\]
@@ -2083,7 +2083,7 @@ Another example: if a car accelerating from 0 takes 8 seconds to go 352 ft, its 
 \subsection*{L'Hopital's Rule}
 Remember when we computed $\displaystyle\lim_{x\to0}\frac{\sin x}{x}$? We got $\frac{0}{0}$, which is called an \textbf{indeterminate form}. While we could use Squeeze Theorem to show that this limit becomes 1, it would be easier to show using \textbf{L'Hopital's Rule}.
 
-\begin{tcolorbox}[title= L'HOPITAL'S RULE,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= L'HOPITAL'S RULE,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     Suppose that $f(a)=g(a)=0$, that $f'(a)$ and $g'(a)$ exist, and that $g'(x)\ne0$. Then
     \[\lim_{x\to a}\frac{f(a)}{g(a)}=\frac{f'(a)}{g'(a)}\]
@@ -2115,7 +2115,7 @@ Remember when we computed $\displaystyle\lim_{x\to0}\frac{\sin x}{x}$? We got $\
 \newpage
 \phantomsection\addcontentsline{toc}{subsection}{Differentials, Linearization, Newton's Method}
 \subsection*{Differentials}
-\begin{tcolorbox}[title= DEFINITION OF A DIFFERENTIAL,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= DEFINITION OF A DIFFERENTIAL,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     Let $y=f(x)$ be a differentiable function. The differential $dx$ is an independent variable. The differential $dy$ is $dy=f'(x)\,dx$.
     
@@ -2229,7 +2229,7 @@ You would distribute and then do each term individually. However, there are goin
 \subsection*{Integration of Trigonometric Functions}
 Before we begin, let's check out the list of basic trig integrals that you should have memorized (these are just derivatives in reverse, so nothing new here).
 
-\begin{tcolorbox}[title= INTEGRALS OF BASIC TRIG FUNCTIONS,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= INTEGRALS OF BASIC TRIG FUNCTIONS,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     \begin{align*}
         \int\sin x\,dx &= -\cos x+C & \int\csc^2 x\,dx &= -\cot x+C\\
@@ -2267,7 +2267,7 @@ Also... you are going to need to know a lot of trig identities.
     \vspace{\stretch{1}}
 \end{questions}
 
-\begin{tcolorbox}[title= INTEGRAL OF SECANT AND COSECANT,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= INTEGRAL OF SECANT AND COSECANT,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     \[\displaystyle\int\sec u\,du=\ln|\sec u+\tan u|+C \hspace{.6in}\int\csc u\,du=-\ln|\csc u + \cot u|+C\]
     
@@ -2290,7 +2290,7 @@ You \textbf{have} to memorize these. The algebraic trick to do the integration b
 \newpage
 \phantomsection\addcontentsline{toc}{subsection}{Integration of Transcendental Functions}
 \subsection*{Integration of Transcendental Functions}
-\begin{tcolorbox}[title= INTEGRAL OF \textit{U}^{-1},black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= INTEGRAL OF \textit{U}$^{-1}$,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     \[\displaystyle\int\frac{du}{u}=\ln|u|+C\]
     
@@ -2320,7 +2320,7 @@ You \textbf{have} to memorize these. The algebraic trick to do the integration b
     
 \end{questions}
 
-\begin{tcolorbox}[title= INTEGRAL OF EXPONENTIAL FUNCTIONS,black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= INTEGRAL OF EXPONENTIAL FUNCTIONS,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     \begin{align*}
         \displaystyle\int e^u\,du &= e^u +C & \displaystyle\int a^u\,du &= \displaystyle\frac{a^u}{\ln a}+C
@@ -2422,7 +2422,7 @@ You \textbf{have} to memorize these. The algebraic trick to do the integration b
 \newpage
 \phantomsection\addcontentsline{toc}{subsection}{Definite Integration}
 \subsection*{Definite Integration}
-\begin{tcolorbox}[title= THE DEFINITE INTEGRAL, black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= THE DEFINITE INTEGRAL,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     \[\displaystyle\int_a^b f(x\,dx)=F(x)|_a^b=F(b)-F(a)\]
     
@@ -2528,8 +2528,6 @@ Our goal is to calculate the area under a curve. We do that by breaking the area
     
     \begin{center}
         \underline{RAM is the Rectangular Approximation Method}\\
-        \\
-        \\
         LRAM is the left hand values of $y$\\
         RRAM is the right hand values of $y$\\
         MRAM is the midpoint of L and R
@@ -2671,7 +2669,7 @@ node[below=2pt,fill=white,font=\normalsize]
 
 The area under the curve can be estimated using $\displaystyle S_n=\sum_{k=1}^n f\left(c_k\right)\cdot\Delta x_k$, a Riemann sum for $f$ on the interval $[a,\,b].$
 
-\begin{tcolorbox}[title= LIMIT DEFINITION OF THE DEFINITE INTEGRAL, black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= LIMIT DEFINITION OF THE DEFINITE INTEGRAL,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
      Let $f$ be continuous on $[a,\,b]$, and let $[a,\,b]$ be partitioned into $n$ subintervals of equal length $\displaystyle \Delta x=\frac{b-a}{n}$. Then the definite integral of $f$ over $[a,\,b]$ is given by
      \[\lim_{n\to\infty}\sum_{k=1}^n f\left(c_k\right)\Delta x,\]
@@ -2709,7 +2707,7 @@ There will be a standalone assessment on this topic at some point after the conc
 
 \newpage
 
-\begin{tcolorbox}[title= DEFINITION OF THE DEFINITE INTEGRAL, black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= DEFINITION OF THE DEFINITE INTEGRAL,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
      \textbf{Formal:} If $y=f(x)$ is nonnegative and integrable over a closed interval $[a,\,b]$, then the area under the curve of $y=f(x)$ from $a$ to $b$ is the integral of $f$ from $a$ to $b$,
      \[A=\int_a^b f(x)\,dx\]
@@ -2737,7 +2735,7 @@ There will be a standalone assessment on this topic at some point after the conc
 \newpage
 \phantomsection\addcontentsline{toc}{subsection}{Average Value \& Mean Value Theorem}
 \subsection*{AVT \& MVT}
-\begin{tcolorbox}[title= AVERAGE VALUE OF A FUNCTION, black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= AVERAGE VALUE OF A FUNCTION,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
      If $f$ is integrable on $[a,\,b]$, its average (mean) value on $[a,\,b]$ is
      \[\text{ave}(f)=\frac{1}{b-a}\int_a^b f(x)\,dx.\]
@@ -2748,7 +2746,7 @@ There will be a standalone assessment on this topic at some point after the conc
     \vspace{\stretch{1}}
 \end{questions}
 
-\begin{tcolorbox}[title= THE MEAN VALUE THEOREM FOR DEFINITE INTEGRALS, black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= THE MEAN VALUE THEOREM FOR DEFINITE INTEGRALS,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
      If $f$ is continuous on $[a,\,b]$, then at some point $c$ in $[a,\,b]$,
      \[f(c)=\frac{1}{b-a}\int_a^b f(x)\,dx.\]
@@ -2827,7 +2825,7 @@ The \textbf{definite integral as a function of \textit{x}} is a function. It is 
 
 \newpage
 
-\begin{tcolorbox}[title= DERIVATIVE OF THE INTEGRAL, black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= DERIVATIVE OF THE INTEGRAL,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
      If $f$ is continuous on $[a,\,b]$, then the function $\displaystyle F(x)=\int_a^x f(t)\,dt$ has a derivative at every point $x$ in $[a,\,b]$, and
      \[\frac{dF}{dx}=\frac{d}{dx}\int_a^x f(t)\,dt=f(x)\].
@@ -2865,7 +2863,6 @@ The \textbf{definite integral as a function of \textit{x}} is a function. It is 
     \question Let $g(x)=\displaystyle\int_1^x\left(5-8\sqrt{\ln t}\right)\,dt$ for $x>1$. Let $h(x)=\displaystyle\int_1^{x^2}\left(5-8\sqrt{\ln t}\right)\,dt$ for $x>1$.
     
     \begin{parts}
-        \Small
         \part Write an equation of the line tangent to $g$ at $x=3$.
         \vspace{\stretch{1}}
         
@@ -3146,7 +3143,7 @@ This type of differential equation allows for \textbf{unlimited growth}. Obvious
 \textbf{Warm up:} Determine the area between the curve and the $x$-axis for $y=x^2-x-6$ on $[-4,\,4].$
 \vspace{\stretch{.75}}
 
-\begin{tcolorbox}[title= AREA IN THE PLANE, black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= AREA IN THE PLANE,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
      If $f$ and $g$ are continuous with $f(x)\ge g(x)$ throughout $[a,\,b]$, then the area between the curves $y=f(x)$ and $y=g(x)$ from $a$ to $b$ is the integral
      \[A=\int_a^b\left[f(x)-g(x)\right]\,dx\].
@@ -3190,7 +3187,7 @@ This type of differential equation allows for \textbf{unlimited growth}. Obvious
 \newpage
 
 
-\begin{tcolorbox}[title= VOLUME OF A SOLID OF REVOLUTION, black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= VOLUME OF A SOLID OF REVOLUTION,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
      The volume of a solid of known integrable cross section can be found by rotating the region bounded by $y=f(x),\,y=0,\,x=a,$ and $x=b$ about the $x$-axis using the integral
      \[V=\pi\int_a^b\left(f(x)\right)^2\,dx.\]
@@ -3215,7 +3212,7 @@ This type of differential equation allows for \textbf{unlimited growth}. Obvious
 
 \end{questions}
 
-\begin{tcolorbox}[title= VOLUME OF A REGION USING WASHERS, black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= VOLUME OF A REGION USING WASHERS,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
      \[\text{Volume of a region}=\pi\int_a^b\left(\left[R(x)\right]^2-\left[r(x)\right]^2\right)\,dx.\]
      Where $R(x)$ is the radius of the outer washer, $r(x)$ is the inner radius, and the integral represents the height of the \textit{cylinder}.
@@ -3245,7 +3242,7 @@ This type of differential equation allows for \textbf{unlimited growth}. Obvious
 
 \newpage
 
-\begin{tcolorbox}[title= VOLUME OF KNOWN CROSS SECTION, black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= VOLUME OF KNOWN CROSS SECTION,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     The volume of a solid of known integrable cross section area $A(x)$ from $x=a$ to $x=b$ is the integral of $A$ from $a$ to $b$,
     \[V=\int_a^b A(x)\,dx.\]
@@ -3267,7 +3264,7 @@ This type of differential equation allows for \textbf{unlimited growth}. Obvious
 \newpage
 \phantomsection\addcontentsline{toc}{subsection}{Arc Length}
 \subsection*{Arc Length}
-\begin{tcolorbox}[title= DEFINITION OF ARC LENGTH, black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= DEFINITION OF ARC LENGTH,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     Let the function $y=f(x)$ represent a smooth curve on the interval $[a,\,b]$. The \textbf{arc length} of $f$ between $a$ and $b$ is
     \[s=\int_a^b\sqrt{1+\left[f'(x)\right]^2}\,dx.\]
@@ -3343,7 +3340,7 @@ This type of differential equation allows for \textbf{unlimited growth}. Obvious
 \subsection*{Integration by Parts}
 Up to this point, we have \textit{still} been doing only the simple-ish integrals. They can get more complicated, but with a bit of practice, not necessarily harder. Today, we are going to learn how to integrate the product of two different transcendental functions. A.k.a, \textbf{undo the product rule}!
 
-\begin{tcolorbox}[title= INTEGRATION BY PARTS THEOREM, black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
+\begin{tcolorbox}[title= INTEGRATION BY PARTS THEOREM,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black,boxrule=1pt]
 
     If $u$ and $v$ are functions of $x$ and have continuous derivatives, then
     \[\int u\,dv=uv-\int v\,du.\]
@@ -3551,7 +3548,7 @@ But, $\displaystyle\int\frac{x-19}{x^2-3x-10}\,dx=\int\left(\frac{3}{x+2}-\frac{
 \end{enumerate}
 Integrals that do not possess these properties are called \textbf{improper integrals}, and we can still compute them with the addition of limits!
 
-\begin{tcolorbox}[title= DEFINITION OF IMPROPER INTEGRALS WITH INFINITE BOUNDS,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= DEFINITION OF IMPROPER INTEGRALS WITH INFINITE BOUNDS,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     \begin{enumerate}
         \item If $f$ is continuous on the interval $[a,\,\infty)$, then 
@@ -3594,11 +3591,11 @@ Integrals that do not possess these properties are called \textbf{improper integ
 \newpage
 
 
-\begin{tcolorbox}[title= DEFINITION OF IMPROPER INTEGRALS WITH INFINITE DISCONTINUITIES,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= DEFINITION OF IMPROPER INTEGRALS WITH INFINITE DISCONTINUITIES,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     \begin{enumerate}
         \item If $f$ is continuous on the interval $[a,b)$ and has an infinite discontinuity at $b$, then 
-        \[\int_a^b f(x)\,dx=\lim_{c\tob^-}\int_a^c f(x)\,dx.\]
+        \[\int_a^b f(x)\,dx=\lim_{c\to b^-}\int_a^c f(x)\,dx.\]
         \item If $f$ is continuous on the interval $(a,b]$ and has an infinite discontinuity at $a$, then 
         \[\int_a^b f(x)\,dx=\lim_{c\to a^+}\int_c^b f(x)\,dx.\]
         \item If $f$ is continuous on the interval $[a,b]$ except for some $c$ in $(a,b)$ at which $f$ has an infinite discontinuity, then 
@@ -3636,7 +3633,7 @@ Integrals that do not possess these properties are called \textbf{improper integ
 \end{questions}
 
 
-\begin{tcolorbox}[title= A SPECIAL IMPROPER INTEGRAL,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= A SPECIAL IMPROPER INTEGRAL,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     \[\int_1^\infty\frac{dx}{x^p}=
     \begin{cases}
@@ -3702,7 +3699,7 @@ Example:
 \newpage
 
 
-\begin{tcolorbox}[title= DEFINITION OF THE LIMIT OF A SEQUENCE,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= DEFINITION OF THE LIMIT OF A SEQUENCE,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     Let $L$ be a real number. The \textbf{limit} of a sequence $\{a_n\}$ is $L$, written as, 
     \[\lim_{n\to\infty}a_n=L\]
@@ -3733,7 +3730,7 @@ Example:
 As we just saw, L'Hopital's Rule becomes a very important part of determining convergence of \textit{interesting} sequences.
 
 
-\begin{tcolorbox}[black,sharp corners,colback=white,boxrule=.25mm]
+\begin{tcolorbox}[colframe=black,sharp corners,colback=white,boxrule=.25mm]
     Some Important Limits to Know:
     \begin{itemize}
     
@@ -3793,7 +3790,7 @@ Determine whether the following sequences converge or diverge.
 \subsection*{Series \& Convergence}
 
 
-\begin{tcolorbox}[title= DEFINITION OF CONVERGENT AND DIVERGENT SERIES,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= DEFINITION OF CONVERGENT AND DIVERGENT SERIES,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     For the infinite series $\displaystyle\sum_{n=1}^{\infty}a_n$, the \textbf{\textit{n}th partial sum} is given by
     \[S_n=a_1+a_2+a_3+...+a_n.\]
@@ -3833,7 +3830,7 @@ Find the sum of the series $\displaystyle\sum_{n=1}^{\infty}\frac{2}{4n^2-1}$.
 Specific Example: $3+3\cdot2+3\cdot2^2+3\cdot2^3+...$\\
 General Form: $\displaystyle\sum_{n=0}^{\infty}ar^n=a+ar+ar^2+...+ar^n+...$
 
-\begin{tcolorbox}[title= CONVERGENCE OF A GEOMETRIC SERIES,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= CONVERGENCE OF A GEOMETRIC SERIES,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     \begin{enumerate}
         \item A geometric series with ratio $r$ diverges if $|r|\ge1$.
@@ -3857,7 +3854,7 @@ Determine the convergence or divergence of the series. If it converges, find its
     \vspace{\stretch{1}}
 \end{parts}
 
-\begin{tcolorbox}[title= PROPERTIES OF INFINITE SERIES,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= PROPERTIES OF INFINITE SERIES,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     Let $\displaystyle\sum a_n$ and $\displaystyle\sum b_n$ be convergent series, and let $A$, $B$, and $c$ be real numbers. If $\displaystyle\sum a_n=A$ and $\displaystyle\sum b_n=B$, the the following series converge to the indicated sums
     \[1.\, \, \sum_{n=1}^{\infty}ca_n=cA \hspace{2in}2.\, \, \sum_{n=1}^{\infty}\left(a_n\pm b_n\right)=A\pm B\]
@@ -3867,7 +3864,7 @@ Determine the convergence or divergence of the series. If it converges, find its
 \newpage
 \phantomsection\addcontentsline{toc}{subsection}{\textit{n}th-Term Test for Divergence}
 \subsection*{\textit{n}th-Term Test for Divergence}
-\begin{tcolorbox}[title= LIMIT OF THE nTH TERM OF A SERIES,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= LIMIT OF THE nTH TERM OF A SERIES,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     \begin{center}
     Let $\displaystyle\sum a_n$ converge, then $\displaystyle\lim_{n\to\infty}a_n=0$.
@@ -3952,7 +3949,7 @@ Does the series converge?
 
 \newpage
 
-\begin{tcolorbox}[title= THE INTEGRAL TEST,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= THE INTEGRAL TEST,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     If $a_n=f(n)$ and $f$ is continuous, positive, and decreasing on $[1,\infty)$, then
     \[\sum_{n=1}^{\infty}a_n\hspace{.35in}\text{and}\hspace{.35in} \int_1^{\infty}f(x)\,dx\]
@@ -3986,13 +3983,13 @@ Does the series converge?
 
 \newpage
 
-\begin{tcolorbox}[title= DEFINITION OF A $p$-SERIES,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= DEFINITION OF A $p$-SERIES,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     A series of the form \[\displaystyle\sum_{n=1}^\infty \frac{1}{n^p}=\frac{1}{1^p}+\frac{1}{2^p}+\frac{1}{3^p}+...\] is a \textbf{\textit{p}-series}, where $p$ is a positive constant. For $p=1$, the series \[\sum_{n=1}^\infty\frac{1}{n}=\frac{1}{1}+\frac{1}{2}+\frac{1}{3}+...\]
     is called the \textbf{harmonic series}. A \textbf{general harmonic series} is of the form $\displaystyle\sum_{n=1}^\infty\frac{1}{an+b}$.
 
 \end{tcolorbox}
-\begin{tcolorbox}[title= CONVERGENCE OF A $p$-SERIES,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= CONVERGENCE OF A $p$-SERIES,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     A series of the form \[\displaystyle\sum_{n=1}^\infty \frac{1}{n^p}=\frac{1}{1^p}+\frac{1}{2^p}+\frac{1}{3^p}+...\] converges if $p>1$ and diverges if $0<p\le1$.
 
@@ -4050,7 +4047,7 @@ One motif of the series (which you probably didn't notice) that we have been loo
 
 \vspace{.07in}
 
-\begin{tcolorbox}[title= THE DIRECT COMPARISON TEST,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= THE DIRECT COMPARISON TEST,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     Let $0<a_n\le b_n$ for all $n$.\\
     \begin{enumerate}
@@ -4080,7 +4077,7 @@ One motif of the series (which you probably didn't notice) that we have been loo
 
 \newpage
 
-\begin{tcolorbox}[title= THE LIMIT COMPARISON TEST,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= THE LIMIT COMPARISON TEST,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     Suppose that $a_n>0,\,b_n>0$, and
     \[\lim_{n\to\infty}\left(\frac{a_n}{b__n}\right)=L\]
@@ -4107,7 +4104,7 @@ The simplest of alternating series can be a geometric series. The following exam
 
 \vspace{.07in}
 
-\begin{tcolorbox}[title= THE ALTERNATING SERIES TEST,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= THE ALTERNATING SERIES TEST,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     Let $a_n>0$. The alternating series
     \[\sum_{n=1}^\infty(-1)^n\, a_n\hspace{.15in}\text{and}\hspace{.15in}\sum_{n=1}^\infty(-1)^{n+1}\,a_n\]
@@ -4153,7 +4150,7 @@ Determine the convergence or divergence of each series.
 
 
 \noindent\textbf{\Large Alternating Series Remainder:}
-\begin{tcolorbox}[title= THE ALTERNATING SERIES REMAINDER THEOREM,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= THE ALTERNATING SERIES REMAINDER THEOREM,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     If a convergent alternating series satisfies the condition $\displaystyle a_{n+1}\le a_n$, then the absolute value of the reminder $R_N$ involved in approximating the sum $S$ by $S_N$ is less than (or equal to) the first neglected term. That is,
     \[\left|S-S_N\right|=\left|R_N\right|\le a_{N+1}\]
@@ -4226,7 +4223,7 @@ In order to obtain any information about the convergence of this series, let's i
 \[\displaystyle\sum_{n=1}^{\infty}\left|\frac{\sin n}{n^2}\right|.\]
 \vspace{\stretch{1}}
 
-\begin{tcolorbox}[title= ABSOLUTE CONVERGENCE,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= ABSOLUTE CONVERGENCE,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     If the series $\displaystyle\sum\left|a_n\right|$ converges, then the series $\displaystyle\sum a_n$ also converges.
 
@@ -4238,7 +4235,7 @@ Note that the opposite is \textbf{not} true. For instance, the \textbf{alternati
 
 \newpage
 
-\begin{tcolorbox}[title= DEFINITIONS OF ABSOLUTE AND CONDITIONAL CONVERGENCE,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= DEFINITIONS OF ABSOLUTE AND CONDITIONAL CONVERGENCE,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     \begin{enumerate}
         \item $\displaystyle\sum a_n$ is \textbf{absolutely convergent} if $\displaystyle\sum\left|a_n\right|$ converges.
@@ -4315,7 +4312,7 @@ Determine the convergence or divergence of each series.
 
 \newpage
 
-\begin{tcolorbox}[title= THE ROOT TEST,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= THE ROOT TEST,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     Let
     $\displaystyle\sum a_n$ be a series.
@@ -4351,7 +4348,7 @@ You have learned 10 strategies for testing a series for convergence or divergenc
     \item Can the integral test, ratio test, or root test be applied?
     \item Can the series be compared favorably to one of the special types?
 \end{enumerate}
-\vspace{.1}
+
 \noindent\textbf{Example: Applying Strategies}
 \begin{parts}
     \begin{minipage}{0.45\linewidth}
@@ -4361,6 +4358,7 @@ You have learned 10 strategies for testing a series for convergence or divergenc
     \begin{minipage}{0.45\linewidth}
         \part $\displaystyle\sum_{n=1}^{\infty}\left(\frac{\pi}{6}\right)^n$
     \end{minipage}
+    
     \vspace{\stretch{1}}
     
     \begin{minipage}{0.45\linewidth}
@@ -4370,6 +4368,7 @@ You have learned 10 strategies for testing a series for convergence or divergenc
     \begin{minipage}{0.45\linewidth}
         \part $\displaystyle\sum_{n=1}^{\infty}\frac{1}{3n+1}$
     \end{minipage}
+    
     \vspace{\stretch{1}}
     
     \newpage
@@ -4479,7 +4478,7 @@ Clearly, $P_2$ is a better approximation than $P_1$, and $P_3$ more still. If we
 
 \vspace{.1in}
 
-\begin{tcolorbox}[title= DEFINITIONS OF THE \textit{\textbf{n}}TH TAYLOR POLYNOMIAL AND \textbf{\textit{n}}TH MACLAURIN POLYNOMIAL,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= DEFINITIONS OF THE \textit{\textbf{n}}TH TAYLOR POLYNOMIAL AND \textbf{\textit{n}}TH MACLAURIN POLYNOMIAL,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     If $f$ has $n$ derivatives at $c$, then the polynomial
     \[P_n(x)=f(c)+f'(c)(x-c)+\frac{f''(c)}{2!}(x-c)^2+\cdots+\frac{f^{(n)}(c)}{n!}(x-c)^n\]
@@ -4606,7 +4605,7 @@ So, $\displaystyle R_n(x)=f(x)-P_n(x)$. The absolute value of $\displaystyle R_n
 
 The following theorem is called \textbf{Taylor's Theorem}, and the remainder given in the theorem is called the \textbf{Lagrange form of the remainder}. You should know both names as synonymous.
 
-\begin{tcolorbox}[title= TAYLOR'S THEOREM,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= TAYLOR'S THEOREM,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     If a function $f$ is differentiable through order $n+1$ in an interval $I$ containing $c$, then, for each $x$ in $I$, there exists $z$ between $x$ and $c$ such that
     \[f(x)=f(c)+f'(c)(x-c)+\frac{f''(c)}{2!}(x-c)^2+\cdots+\frac{f^{(n)}(c)}{n!}(x-c)^n+R_n(x)\]
@@ -4702,7 +4701,7 @@ For example the function $f(x)=e^x$ can be represented exactly by an infinite se
 For each real number $x$, it can be shown that the infinite series on the right converges to the number $e^x$.\\
 
 
-\begin{tcolorbox}[title= DEFINITIONS OF POWER SERIES,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= DEFINITIONS OF POWER SERIES,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     If $x$ is a variable, then an infinite series of the form
     \[\sum_{n=0}^{\infty}a_n x^n=a_0 + a_1 x+a_2 x^2+a_3 x^3+\cdots+a_n x^n+\cdots\]
@@ -4720,7 +4719,7 @@ A power series in $x$ can be thought of as a function of $x$
 where the \textbf{domain of \textit{f}} is the set of all $x$ values for which the power series converges. The main goal of this section will be to determine where and when that happens.
 
 
-\begin{tcolorbox}[title= CONVERGENCE OF A POWER SERIES,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= CONVERGENCE OF A POWER SERIES,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     For a power series centered at $c$, precisely one of the following is true.
     
@@ -4766,7 +4765,7 @@ where the \textbf{domain of \textit{f}} is the set of all $x$ values for which t
 
 \phantomsection\addcontentsline{toc}{subsection}{Differentiating and Integrating Power Series}
 \subsection*{Differentiating and Integrating Power Series}
-\begin{tcolorbox}[title= PROPERTIES OF FUNCTIONS DEFINED BY POWER SERIES,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= PROPERTIES OF FUNCTIONS DEFINED BY POWER SERIES,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     If the function given by
     \begin{align*}
@@ -4848,7 +4847,7 @@ The final type of series involves functions written in the form $\displaystyle f
 \newpage
 \phantomsection\addcontentsline{toc}{subsection}{Taylor \& MacLaurin Series}
 \subsection*{Taylor \& MacLaurin Series}
-\begin{tcolorbox}[title= DEFINITIONS OF TAYLOR AND MACLAURIN SERIES,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= DEFINITIONS OF TAYLOR AND MACLAURIN SERIES,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     If a function $f$ has derivatives of all orders at $c$, then the series
     \[P_n(x)=f(c)+f'(c)(x-c)+\frac{f''(c)}{2!}(x-c)^2+\cdots+\frac{f^{(n)}(c)}{n!}(x-c)^n+\cdots\]
@@ -4874,7 +4873,7 @@ The final type of series involves functions written in the form $\displaystyle f
 \newpage
 
 
-\begin{tcolorbox}[black,sharp corners,colback=white,boxrule=.25mm]
+\begin{tcolorbox}[colframe=black,sharp corners,colback=white,boxrule=.25mm]
     \begin{center}
         \textbf{MEMORIZE KNOWN MACLAURIN SERIES} 
     \end{center}
@@ -4953,7 +4952,7 @@ There are often many avenues to take that will produce the same answer. Try to d
 
 Until now, you have been representing a graph by a single equation involving two variables. Now, we will introduce a third variable to describe some curve in the plane.
 
-\begin{tcolorbox}[title= DEFINITIONS OF A PLANE CURVE,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= DEFINITIONS OF A PLANE CURVE,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     If $f$ and $g$ are continuous functions of $t$ on the interval $I$, then the equations $x=f(t)$ and $y=g(t)$ are called \textbf{parametric equations} and $t$ is called the \textbf{parameter}. Together, the parametric equations produce the graph called a \textbf{plane curve}.
 
@@ -5001,7 +5000,7 @@ Sketch the curve represented by $x=3\cos\theta$ and $y=4\sin\theta$, $0\le\theta
 \phantomsection\addcontentsline{toc}{section}{Polar, Parametric, \& Vector Equations}
 \phantomsection\addcontentsline{toc}{subsection}{Parametric Equations \& Calculus}
 \subsection*{Parametric Equations and \& Calculus}
-\begin{tcolorbox}[title= PARAMETRIC FORM OF THE DERIVATIVE,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= PARAMETRIC FORM OF THE DERIVATIVE,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     If a smooth curve $C$ is given by the equations $x=f(t)$ and $y=g(t)$, then the slope of $C$ at the point $(x,\,y)$ is 
     \[\frac{dy}{dx}=\frac{dy/dt}{dx/dt},\,\,\,\frac{dx}{dt}\ne0.\]
@@ -5024,7 +5023,7 @@ Sketch the curve represented by $x=3\cos\theta$ and $y=4\sin\theta$, $0\le\theta
 
 \end{questions}
 
-\begin{tcolorbox}[title= PARAMETRIC FORM OF ARC LENGTH ,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= PARAMETRIC FORM OF ARC LENGTH ,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     If a smooth curve $C$ is given by the equations $x=f(t)$ and $y=g(t)$ such that $C$ does not intersect itself on the interval $(a,\,b)$, then the arc length of $C$ over the interval $(a,\,b)$ is given by: 
     \[L=\int_{a}^{b}\sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2}\,dt.\]
@@ -5040,7 +5039,7 @@ A particle moves along a smooth curve given by $x=t^2+1$ and $y=4t^3-1$. How far
 \subsection*{Vector Functions and Motion}
 Parametric, Vector, and (eventually) Polar are all essentially the same. In this section, we introduce the form of a vector valued function, but you will see how it is essentially the same as a parametric one.
 
-\begin{tcolorbox}[black,sharp corners,colback=white,boxrule=.25mm]
+\begin{tcolorbox}[colframe=black,sharp corners,colback=white,boxrule=.25mm]
     \begin{center}
         \textbf{The Essentials}
     \end{center}
@@ -5336,7 +5335,7 @@ From this, we get two main deductions:
 \newpage
 \phantomsection\addcontentsline{toc}{subsection}{Polar Area}
 \subsection*{Polar Area}
-\begin{tcolorbox}[title= AREA IN POLAR FORM ,black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
+\begin{tcolorbox}[title= AREA IN POLAR FORM ,colframe=black,sharp corners,colback=white,colbacktitle=white,coltitle=black]
 
     If $f$ is a continuous and nonnegative on the interval $[\alpha,\,\beta]$, $0<\beta-\alpha\le2\pi$, then the area of the region bounded by the graph of $r=f(\theta)$ is given by
     \begin{align*}
@@ -5424,10 +5423,10 @@ From this, we get two main deductions:
   plot (\x,{\x^(\x)}) node[above left]{$x^x$};
   \draw[color=blue, smooth] plot (\x,{sqrt(\x)}) node[right]{$\sqrt{x}$};
   
-  \draw[color=black!60!red] (0,1) node [circle,fill,color=black!50!red,inner sep=1pt] -- (1,1) node [circle,fill,color=black!50!red,inner sep=1pt];
-  \draw[color=black!60!red] (1,1) node [circle,fill,color=black!50!red,inner sep=1pt] -- (2,2) node [circle,fill,color=black!50!red,inner sep=1pt];
-  \draw[color=black!60!red] (2,2) [circle,fill,color=black!50!red,inner sep=1pt] -- (3,6) node [circle,fill,color=black!50!red,inner sep=1pt];
-  \draw[color=black!60!red] (3,6) node [circle,fill,color=black!50!red,inner sep=1pt] -- (3.778,20) node [color=black!50!red, above right]{$x!$};
+  \draw[color=black!60!red] (0,1) node [circle,fill,color=black!50!red,inner sep=1pt]{} -- (1,1) node [circle,fill,color=black!50!red,inner sep=1pt]{};
+  \draw[color=black!60!red] (1,1) node [circle,fill,color=black!50!red,inner sep=1pt]{} -- (2,2) node [circle,fill,color=black!50!red,inner sep=1pt]{};
+  \draw[color=black!60!red] (2,2) [circle,fill,color=black!50!red,inner sep=1pt]{} -- (3,6) node [circle,fill,color=black!50!red,inner sep=1pt]{};
+  \draw[color=black!60!red] (3,6) node [circle,fill,color=black!50!red,inner sep=1pt]{} -- (3.778,20) node [color=black!50!red, above right]{$x!$};
   
 \end{tikzpicture}
 \end{center}
